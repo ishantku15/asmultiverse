@@ -1,4 +1,4 @@
-window.lastUpdated = "6/11/2026, 10:43:11 PM";
+window.lastUpdated = "6/11/2026, 11:29:26 PM";
 window.appsData = [
   {
     "id": "as-multiverse",
@@ -12,7 +12,7 @@ window.appsData = [
       "Popular"
     ],
     "iconUrl": "https://d2bps9p1kiy4ka.cloudfront.net/5b09189f7285894d9130ccd0/e00a5c58-461c-4c43-a911-d606e00ad53b.png",
-    "downloadUrl": "https://vplink.in/pwmodnew",
+    "downloadUrl": "https://vplink.in/asmulti",
     "description": "AS Multiverse is your one-stop educational app store. Download free educational apps for JEE, NEET, SSC, Banking, Railway and competitive exam preparation. Access video lectures, notes, test series and study materials from India's top educators — all in one place. Trusted by 100K+ students across India.",
     "showDownload": true,
     "showStudyNow": true,
@@ -20,32 +20,6 @@ window.appsData = [
     "seoTitle": "AS Multiverse v5.02.7 — Free Educational Apps for JEE, NEET & Competitive Exams",
     "seoKeywords": "as multiverse, asmultiverse, as multiverse app, as multiverse store, asmultiverse.com, as multiverse website, as multiverse download, educational apps free, jee neet preparation app, competitive exam app, as multiverse 2026",
     "seoDesc": "Download AS Multiverse v5.02.7 — access 12+ free educational apps for JEE, NEET, SSC & competitive exams. Video lectures, notes & test series. Trusted by 100K+ students at asmultiverse.in."
-  },
-  {
-    "id": "Science_and_fun",
-    "name": "Science and Fun",
-    "developer": "Ashu Sir",
-    "version": "6.4.2",
-    "size": "18 MB",
-    "downloads": "10K+",
-    "tags": [
-      "New",
-      "Educational"
-    ],
-    "iconUrl": "https://i.ibb.co/j9x0227R/Chat-GPT-Image-Jun-2-2026-10-00-52-PM.png",
-    "downloadUrl": "https://vplink.in/Sanc",
-    "description": "Download Science and Fun by Ashu Sir Mod APK v6.4.2 (Premium Unlocked). Get free access to live classes, offline videos, NCERT solutions, and more for classes 9-12, CUET & NDA. The 'Learn Practically' app now fully unlocked.",
-    "features": [
-      "Live classes by Ashu Sir",
-      "Offline video downloads",
-      "NCERT solutions for Class 9-12",
-      "CUET & NDA exam preparation",
-      "Premium features fully unlocked",
-      "No ads, no subscription"
-    ],
-    "seoTitle": "Science and Fun by Ashu Sir Mod APK v6.4.2 (Premium Unlocked) Free Download 2026",
-    "seoKeywords": "Science and Fun by Ashu Sir mod apk, Science and Fun mod apk, Science and Fun premium unlocked, Science and Fun apk mod, download Science and Fun mod apk, Science and Fun mod apk latest version, Science and Fun no ads, Science and Fun free app, Ashu Sir app free, science and fun class 9 10 11 12",
-    "seoDesc": "Download Science and Fun by Ashu Sir Mod APK v6.4.2 (Premium Unlocked). Get free access to live classes, offline videos, NCERT solutions for Class 9-12, CUET & NDA. Install now — 100% free on As Multiverse!"
   },
   {
     "id": "NextTopper Mod APK",
@@ -82,7 +56,7 @@ window.appsData = [
     "iconUrl": "https://i.postimg.cc/W3v5fRYr/square-icon.png",
     "downloadUrl": "https://vplink.in/Nexttopperss",
     "description": "Next Toppers is India's premier learning app for JEE, NEET, SSC, Board exam and competitive exam preparation. Get access to expert video lectures, comprehensive study material, practice tests and DPPs from top educators. Now with all premium features unlocked.",
-    "showDownload": true,
+    "showDownload": false,
     "showStudyNow": true,
     "studyNowUrl": "https://nexttoppers.asmultiverse.in/",
     "seoTitle": "Next Toppers Mod APK v15.21.6 (Premium Unlocked) Free Download 2026 — As Multiverse",
@@ -101,7 +75,7 @@ window.appsData = [
       "Educational"
     ],
     "iconUrl": "https://i.postimg.cc/26F5zTH7/4661462-1-Mission-JEET-Logo.png",
-    "downloadUrl": "https://vplink.in/infinity",
+    "downloadUrl": "https://vplink.in/missionjeet",
     "description": "Mission JEET is a focused exam preparation app for students aspiring to clear competitive exams like JEE, NEET, SSC, and government job tests. Access structured courses, mock tests, DPPs and expert guidance — all for free with the modded version.",
     "showDownload": true,
     "showStudyNow": true,
