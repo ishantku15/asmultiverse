@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6608561504651468"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    <title>Thank You | As Multiverse - Connecting Learners</title>
+    <meta name="description"
+        content="We appreciate your interest in As Multiverse. Our team will get back to you shortly.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7b4dff;
+            --primary-dark: #6a3cf0;
+            --secondary: #00d4ff;
+            --success: #00c853;
+            --success-light: rgba(0, 200, 83, 0.1);
+            --dark: #0a0a1a;
+            --dark-light: #12122d;
+            --light: #f5f5ff;
+            --text: #e2e2ff;
+            --text-muted: #a0a0c0;
+            --border: rgba(123, 77, 255, 0.2);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        /* Success Container */
+        .success-container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(18, 18, 45, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            padding: 4rem 3rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .success-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--success), var(--secondary));
+            animation: progress 2s ease-in-out;
+        }
+
+        /* Success Icon */
+        .success-icon {
+            position: relative;
+            font-size: 5rem;
+            color: var(--success);
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .success-icon-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: var(--success-light);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 2s infinite;
+        }
+
+        .success-icon i {
+            animation: checkmark 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
+        }
+
+        /* Content */
+        .success-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--success), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .success-message {
+            color: var(--text);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.4s forwards;
+        }
+
+        .email-highlight {
+            display: inline-block;
+            background: rgba(123, 77, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            font-weight: 600;
+            color: var(--secondary);
+            border: 1px solid var(--border);
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.6s forwards;
+        }
+
+        .next-steps {
+            background: rgba(10, 10, 26, 0.5);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            text-align: left;
+            border: 1px solid var(--border);
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.8s forwards;
+        }
+
+        .next-steps h3 {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .next-steps h3 i {
+            color: var(--primary);
+        }
+
+        .steps-list {
+            list-style: none;
+        }
+
+        .steps-list li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .steps-list li:last-child {
+            border-bottom: none;
+        }
+
+        .step-icon {
+            width: 24px;
+            height: 24px;
+            background: rgba(123, 77, 255, 0.1);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content strong {
+            color: var(--text);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 1s forwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 5px 15px rgba(123, 77, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(123, 77, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(123, 77, 255, 0.1);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 1.2s forwards;
+        }
+
+        .countdown span {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2.5rem;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 1.4s forwards;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            background: rgba(123, 77, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes checkmark {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            70% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes progress {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        /* Confetti Effect */
+        .confetti {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            background: var(--primary);
+            top: 0;
+            opacity: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .success-container {
+                padding: 3rem 2rem;
+            }
+
+            .success-title {
+                font-size: 2.2rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .next-steps {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+
+            .success-container {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .success-title {
+                font-size: 1.8rem;
+            }
+
+            .success-icon {
+                font-size: 4rem;
+            }
+
+            .success-icon-circle {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-container">
+        <!-- Success Icon with Animation -->
+        <div class="success-icon">
+            <div class="success-icon-circle"></div>
+            <i class="fas fa-check-circle"></i>
+        </div>
+
+        <!-- Main Content -->
+        <h1 class="success-title">Message Sent Successfully!</h1>
+
+        <p class="success-message">
+            Thank you for reaching out to AsMultiverse. We've received your message and appreciate you taking the time
+            to contact us.
+        </p>
+
+
+
+        <!-- Next Steps -->
+        <div class="next-steps">
+            <h3>
+                <i class="fas fa-forward"></i>
+                What happens next?
+            </h3>
+            <ul class="steps-list">
+                <li>
+                    <div class="step-icon">
+                        <i class="fas fa-inbox"></i>
+                    </div>
+                    <div class="step-content">
+                        <strong>Confirmation Email</strong>
+                        You'll receive an automated confirmation shortly (check spam folder).
+                    </div>
+                </li>
+                <li>
+                    <div class="step-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="step-content">
+                        <strong>Review Process</strong>
+                        Our team will review your message within 24-48 hours.
+                    </div>
+                </li>
+                <li>
+                    <div class="step-icon">
+                        <i class="fas fa-reply"></i>
+                    </div>
+                    <div class="step-content">
+                        <strong>Personal Response</strong>
+                        We'll respond directly to the email address you provided.
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-home"></i>
+                Back to Home
+            </a>
+            <a href="#" class="btn btn-secondary" id="newMessageBtn">
+                <i class="fas fa-paper-plane"></i>
+                Send Another Message
+            </a>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown">
+            Redirecting to homepage in <span id="countdown">10</span> seconds...
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <p style="color: var(--text-muted); margin-right: 1rem;">Follow us:</p>
+            <a href="#" class="social-link">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Countdown Timer
+            let countdown = 10;
+            const countdownElement = document.getElementById('countdown');
+            const countdownInterval = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = countdown;
+
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'index.html';
+                }
+            }, 1000);
+
+            // Create Confetti Effect
+            function createConfetti() {
+                const container = document.getElementById('confetti-container');
+                const colors = ['#7b4dff', '#00d4ff', '#00c853', '#ff3d71', '#ffaa00'];
+                const confettiCount = 50;
+
+                for (let i = 0; i < confettiCount; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+
+                    // Random properties
+                    const color = colors[Math.floor(Math.random() * colors.length)];
+                    const left = Math.random() * 100;
+                    const size = Math.random() * 10 + 5;
+                    const duration = Math.random() * 3 + 2;
+                    const delay = Math.random() * 1;
+
+                    // Apply styles
+                    confetti.style.backgroundColor = color;
+                    confetti.style.left = left + 'vw';
+                    confetti.style.width = size + 'px';
+                    confetti.style.height = size + 'px';
+                    confetti.style.opacity = '1';
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+
+                    // Animation
+                    confetti.style.animation = `confettiFall ${duration}s ease-in ${delay}s forwards`;
+
+                    container.appendChild(confetti);
+
+                    // Remove after animation completes
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, (duration + delay) * 1000);
+                }
+            }
+
+            // Add confetti animation to CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes confettiFall {
+                    0% {
+                        transform: translateY(-100px) rotate(0deg);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: translateY(100vh) rotate(360deg);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Trigger confetti after a short delay
+            setTimeout(createConfetti, 500);
+
+            // "New Message" button functionality
+            document.getElementById('newMessageBtn').addEventListener('click', function (e) {
+                e.preventDefault();
+                clearInterval(countdownInterval); // Stop the countdown
+
+                // Show transition effect
+                document.querySelector('.success-container').style.animation = 'fadeIn 0.5s ease reverse';
+
+                setTimeout(() => {
+                    window.location.href = 'contact.html'; // Change this to your contact page URL
+                }, 500);
+            });
+
+            // Optional: Stop countdown if user interacts with page
+            document.addEventListener('click', () => {
+                clearInterval(countdownInterval);
+                document.querySelector('.countdown').textContent = 'Redirect stopped - navigate manually';
+            });
+        });
+    </script>
+</body>
+
+</html>
+

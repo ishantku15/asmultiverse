@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | As Multiverse - Management Console</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --admin-bg: #0f0c29;
+            --sidebar-bg: #151030;
+            --panel-bg: #1c1542;
+            --primary-color: #8b5cf6;
+            --secondary-color: #06b6d4;
+            --accent-pink: #ec4899;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --success: #10b981;
+            --danger: #ef4444;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            background: radial-gradient(circle at top right, #2e1065, #0f0c29 60%);
+            color: var(--text-color);
+            font-family: 'Outfit', 'Segoe UI', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* --- Login Overlay --- */
+        #loginOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 12, 41, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            backdrop-filter: blur(20px);
+            transition: opacity 0.5s ease;
+        }
+
+        .login-box {
+            background: rgba(30, 27, 75, 0.6);
+            padding: 3.5rem;
+            border-radius: 24px;
+            text-align: center;
+            width: 380px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--glass-border);
+            animation: fadeIn 0.6s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .login-logo {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.3));
+        }
+
+        .login-box input {
+            width: 100%;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+            letter-spacing: 12px;
+            transition: all 0.3s ease;
+            font-family: monospace;
+        }
+
+        .login-box input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+        }
+
+        /* --- Layout --- */
+        .dashboard {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: rgba(21, 16, 48, 0.95);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 3rem;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* --- Sidebar Elements --- */
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .user-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+
+        .user-info h4 {
+            margin: 0 0 4px 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            flex-grow: 1;
+        }
+
+        .sidebar-menu li {
+            padding: 1rem 1.2rem;
+            margin-bottom: 0.8rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .sidebar-menu li i {
+            width: 20px;
+            font-size: 1.1rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .sidebar-menu li:hover {
+            color: white;
+            background: var(--glass);
+        }
+
+        .sidebar-menu li:hover i {
+            transform: scale(1.1);
+        }
+
+        .sidebar-menu li.active {
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.15), transparent);
+            color: white;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .sidebar-menu li.active i {
+            color: var(--primary-color);
+        }
+
+        /* --- Components --- */
+        .btn {
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, var(--primary-color), #7c3aed);
+            color: white;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+        }
+
+        .btn-study {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            color: var(--text-color);
+            padding: 0.8rem;
+            border-radius: 10px;
+        }
+
+        .btn-study:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* --- Stats --- */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(to right, white, var(--text-muted));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: rgba(30, 27, 75, 0.4);
+            padding: 1.5rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            border: 1px solid var(--glass-border);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            background: rgba(30, 27, 75, 0.6);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .stat-icon {
+            font-size: 2.2rem;
+            padding: 1rem;
+            border-radius: 12px;
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--primary-color);
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .stat-card p {
+            margin: 5px 0 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Table --- */
+        .admin-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+            /* Gap between rows */
+        }
+
+        .admin-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--glass-border);
+        }
+
+        .admin-table td {
+            background: rgba(30, 27, 75, 0.3);
+            padding: 1rem;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .admin-table tr td:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-left: 1px solid var(--glass-border);
+        }
+
+        .admin-table tr td:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-right: 1px solid var(--glass-border);
+        }
+
+        .admin-table tr:hover td {
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        .admin-table img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .action-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            transition: all 0.2s;
+            margin-right: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-edit {
+            background: rgba(6, 182, 212, 0.2);
+            color: var(--secondary-color);
+        }
+
+        .btn-edit:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-delete {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--danger);
+        }
+
+        .btn-delete:hover {
+            background: var(--danger);
+            color: white;
+        }
+
+        /* --- Form --- */
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: white;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .grid-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Authentication -->
+    <!-- Authentication -->
+    <div id="loginOverlay">
+        <div class="login-box">
+            <div class="login-logo">
+                <i class="fas fa-meteor"></i>
+            </div>
+            <h3 style="margin: 0; font-weight: 600;">Welcome Back</h3>
+            <p style="color: var(--text-muted); margin-top: 5px;">Enter PIN to access admin panel</p>
+            <input type="password" id="adminPin" placeholder="••••" maxlength="4" autofocus>
+            <button class="btn btn-download" onclick="checkLogin()"
+                style="width: 100%; border-radius: 10px; padding: 1rem;">
+                <i class="fas fa-unlock-alt"></i> Access Dashboard
+            </button>
+            <div id="loginError" style="color: #ff5252; margin-top: 15px; font-size: 0.9rem; display: none;">
+                <i class="fas fa-exclamation-circle"></i> Incorrect PIN
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar">AD</div>
+                <div class="user-info">
+                    <h4>Administrator</h4>
+                    <span> <i class="fas fa-circle" style="color: #00c853; font-size: 8px;"></i> Online</span>
+                </div>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li onclick="showSection('manage')" class="active"><i class="fas fa-th-large"></i> Dashboard</li>
+                <li onclick="showSection('add')"><i class="fas fa-plus-circle"></i> Add App</li>
+                <li onclick="showSection('history')"><i class="fas fa-history"></i> Activity Log</li>
+                <li onclick="showSection('instructions')"><i class="fas fa-book"></i> Guide</li>
+            </ul>
+
+            <div style="margin-top: auto;">
+                <button class="btn btn-study" onclick="exportData()"
+                    style="width: 100%; justify-content: center; margin-bottom: 10px;">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-download" onclick="exportJSON()"
+                        style="flex: 1; justify-content: center; background: #28a745; font-size: 0.8rem;">
+                        <i class="fas fa-code"></i> JSON
+                    </button>
+                    <a href="index.html" class="btn"
+                        style="flex: 1; justify-content: center; background: rgba(255,255,255,0.1); color: white; text-decoration: none; font-size: 0.8rem; display: flex; align-items: center; border-radius: 5px;">
+                        <i class="fas fa-globe"></i> Visit
+                    </a>
+                </div>
+                <button onclick="logout()"
+                    style="width: 100%; margin-top: 20px; background: transparent; border: 1px solid rgba(255,82,82,0.3); color: #ff5252; padding: 0.8rem; border-radius: 8px; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <!-- Manage Apps Section -->
+            <div id="section-manage" style="display: block;">
+                <h2 class="section-title">App Library</h2>
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <i class="fas fa-box-open stat-icon"></i>
+                        <div>
+                            <h3 id="totalApps">0</h3>
+                            <p>Total Apps</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-download stat-icon"></i>
+                        <div>
+                            <h3 id="totalDownloads">0+</h3>
+                            <p>Est. Downloads</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-hdd stat-icon"></i>
+                        <div>
+                            <h3 id="totalSize">0 MB</h3>
+                            <p>Total Size</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: var(--panel-bg); padding: 1rem; border-radius: 10px;">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Icon</th>
+                                <th>Name</th>
+                                <th>Ver</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="appTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Add/Edit App Section -->
+            <div id="section-add" style="display: none;">
+                <h2 class="section-title" id="formTitle">Add New App</h2>
+                <form id="appForm" style="background: var(--panel-bg); padding: 2rem; border-radius: 10px;">
+                    <input type="hidden" id="editIndex" value="-1">
+                    <div class="grid-form">
+                        <div class="form-group">
+                            <label>App ID (unique)</label>
+                            <input type="text" id="appId" required>
+                        </div>
+                        <div class="form-group">
+                            <label>App Name</label>
+                            <input type="text" id="appName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Developer Title</label>
+                            <input type="text" id="appDev" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Version</label>
+                            <input type="text" id="appVer" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Size</label>
+                            <input type="text" id="appSize" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Downloads</label>
+                            <input type="text" id="appDl" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Tags (comma separated)</label>
+                            <input type="text" id="appTags" placeholder="Educational, New, Popular">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Icon URL</label>
+                            <input type="text" id="appIcon" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Download URL</label>
+                            <input type="text" id="appLink" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Description</label>
+                            <textarea id="appDesc" rows="4"></textarea>
+                        </div>
+                        
+                        <!-- Feature Toggles Section -->
+                        <div class="form-group full-width"
+                            style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 1rem; padding-top: 1rem;">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-color);">Features Control</h4>
+                        </div>
+                        <div class="grid-form" style="grid-column: span 2; display: flex; gap: 2rem; align-items: center; background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 10px; border: 1px solid var(--glass-border);">
+                            <div class="form-group" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0;">
+                                <input type="checkbox" id="showDownload" checked style="width: 20px; height: 20px; margin: 0; cursor: pointer;">
+                                <label for="showDownload" style="margin: 0; cursor: pointer; color: white;">Show Download Button</label>
+                            </div>
+                            <div class="form-group" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0;">
+                                <input type="checkbox" id="showStudyNow" style="width: 20px; height: 20px; margin: 0; cursor: pointer;">
+                                <label for="showStudyNow" style="margin: 0; cursor: pointer; color: white;">Show Study Now Button</label>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Study Now URL</label>
+                            <input type="text" id="studyNowUrl" placeholder="https://example.com/course">
+                        </div>
+
+                        <!-- SEO Section -->
+                        <div class="form-group full-width"
+                            style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 1rem; padding-top: 1rem;">
+                            <h4 style="margin-bottom: 1rem; color: var(--secondary-color);">SEO Settings</h4>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>SEO Title (Browser Tab Title)</label>
+                            <input type="text" id="seoTitle" placeholder="e.g. Download App Name - Latest Version Free">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>SEO Keywords (Comma separated)</label>
+                            <input type="text" id="seoKeywords"
+                                placeholder="e.g. app name, free download, educational, learning app">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>SEO Meta Description</label>
+                            <textarea id="seoDesc" rows="2"
+                                placeholder="Short description for Google search results..."></textarea>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                        <button type="submit" class="btn btn-download" style="flex: 2;" id="submitBtn">Add App</button>
+                        <button type="button" class="btn btn-study" style="flex: 1;"
+                            onclick="resetForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- History Section -->
+            <div id="section-history" style="display: none;">
+                <h2 class="section-title">Activity Log (Session)</h2>
+                <ul class="history-list" id="historyLog">
+                    <li class="history-item" style="justify-content: center; color: grey;">No activity yet.</li>
+                </ul>
+            </div>
+
+            <!-- Instructions Section -->
+            <div id="section-instructions" style="display: none;">
+                <h2 class="section-title">Admin Instructions</h2>
+                <div
+                    style="background: var(--panel-bg); padding: 2rem; border-radius: 10px; color: #ddd; line-height: 1.6;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 10px;">1. How to Add a New App</h3>
+                    <ol style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Click on <b>Add / Edit App</b> in the sidebar.</li>
+                        <li>Fill in the fields. <b>App ID</b> must be unique (e.g., 'app-name-free').</li>
+                        <li><b>Icon URL</b>: Right-click an image on Google -> 'Copy Image Address' and paste it here.
+                        </li>
+                        <li>Click <b>Add App</b>.</li>
+                    </ol>
+
+                    <h3 style="color: var(--secondary-color); margin-bottom: 10px;">2. SEO Settings</h3>
+                    <p style="margin-bottom: 20px;">
+                        These fields help your app appear in Google search results.<br>
+                        <b>SEO Title:</b> This appears in the browser tab and search link.<br>
+                        <b>SEO Desc:</b> A short summary shown below the link in Google actions.
+                        <b>SEO Desc:</b> A short summary shown below the link in Google search results.
+                    </p>
+
+                    <h3 style="color: #ff5252; margin-bottom: 10px;">3. CRITICAL: How to Save Changes</h3>
+                    <p style="margin-bottom: 20px;">
+                        The changes you make here are <b>temporary</b> until you save them to the file.<br>
+                        1. <b>Standard Method:</b> Click <b>Save Changes (data.js)</b>. Replace the `data.js` file in
+                        your project folder.<br>
+                        2. <b>JSON Method:</b> If you want a raw JSON file, click <b>Export as JSON</b>.<br>
+                        3. Refresh your website (`index.html`) to see the updates!
+                    </p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        let appsData = window.appsData || [];
+        let history = [];
+
+        // --- Authentication ---
+        document.addEventListener('DOMContentLoaded', () => {
+            if (sessionStorage.getItem('adminAuth') === 'true') {
+                hideLogin();
+                initDashboard();
+            }
+        });
+
+        function checkLogin() {
+            const pin = document.getElementById('adminPin').value;
+            const errorMsg = document.getElementById('loginError');
+
+            if (pin === "1234") {
+                sessionStorage.setItem('adminAuth', 'true');
+                errorMsg.style.display = 'none';
+                hideLogin();
+                initDashboard();
+            } else {
+                errorMsg.style.display = 'block';
+                document.getElementById('adminPin').value = '';
+                document.getElementById('adminPin').focus();
+            }
+        }
+
+        function hideLogin() {
+            const overlay = document.getElementById('loginOverlay');
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 500);
+        }
+
+        function logout() {
+            sessionStorage.removeItem('adminAuth');
+            location.reload();
+        }
+
+        // Support Enter key for login
+        document.getElementById('adminPin').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                checkLogin();
+            }
+        });
+
+        // --- Navigation ---
+        function showSection(sectionId) {
+            // Hide all
+            ['manage', 'add', 'history', 'instructions'].forEach(id => {
+                document.getElementById('section-' + id).style.display = 'none';
+            });
+            // Show target
+            document.getElementById('section-' + sectionId).style.display = 'block';
+
+            // Update active sidebar item
+            const items = document.querySelectorAll('.sidebar-menu li');
+            items.forEach(item => item.classList.remove('active'));
+
+            // Highlight active menu item
+            const activeItem = Array.from(items).find(li => li.getAttribute('onclick').includes(`'${sectionId}'`));
+            if (activeItem) activeItem.classList.add('active');
+        }
+
+        // --- Dashboard Logic ---
+        function initDashboard() {
+            // Load from LocalStorage if available, otherwise use default data
+            const storedData = localStorage.getItem('asMultiverseApps');
+            if (storedData) {
+                try {
+                    appsData = JSON.parse(storedData);
+                    console.log('Loaded data from LocalStorage');
+                } catch (e) {
+                    console.error('Error parsing LocalStorage data', e);
+                }
+            } else if (window.appsData) {
+                // If no local storage, use data.js but initialize local storage for consistency
+                appsData = window.appsData;
+                saveToStorage();
+            }
+
+            renderTable();
+            updateStats();
+        }
+
+        function saveToStorage() {
+            localStorage.setItem('asMultiverseApps', JSON.stringify(appsData));
+        }
+
+        function updateStats() {
+            document.getElementById('totalApps').innerText = appsData.length;
+            document.getElementById('totalDownloads').innerText = "1.2M+"; // Static for now
+
+            // Calculate Total Size
+            let totalMB = 0;
+            appsData.forEach(app => {
+                const sizeStr = app.size.toLowerCase();
+                if (sizeStr.includes('mb')) {
+                    totalMB += parseFloat(sizeStr);
+                } else if (sizeStr.includes('gb')) {
+                    totalMB += parseFloat(sizeStr) * 1024;
+                }
+            });
+            document.getElementById('totalSize').innerText = Math.round(totalMB) + " MB";
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('appTableBody');
+            tbody.innerHTML = '';
+            appsData.forEach((app, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><img src="${app.iconUrl}" onerror="this.src='https://via.placeholder.com/40'"></td>
+                    <td style="font-weight: 500;">
+                        ${app.name}
+                        <div style="font-size: 0.75rem; color: var(--text-muted);">${app.id}</div>
+                    </td>
+                    <td style="color: var(--text-muted); font-size: 0.9rem;">${app.version}</td>
+                    <td>
+                        <button class="action-btn btn-edit" onclick="editApp(${index})"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn btn-delete" onclick="deleteApp(${index})"><i class="fas fa-trash"></i></button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+            updateStats();
+        }
+
+        // --- Actions ---
+        function deleteApp(index) {
+            if (confirm(`Delete ${appsData[index].name}?`)) {
+                logAction(`Deleted app: ${appsData[index].name}`);
+                appsData.splice(index, 1);
+                saveToStorage();
+                renderTable();
+            }
+        }
+
+        function editApp(index) {
+            const app = appsData[index];
+            document.getElementById('editIndex').value = index;
+
+            // Populate form
+            document.getElementById('appId').value = app.id;
+            document.getElementById('appName').value = app.name;
+            document.getElementById('appDev').value = app.developer;
+            document.getElementById('appVer').value = app.version;
+            document.getElementById('appSize').value = app.size;
+            document.getElementById('appDl').value = app.downloads;
+            document.getElementById('appTags').value = app.tags.join(', ');
+            document.getElementById('appIcon').value = app.iconUrl;
+            document.getElementById('appLink').value = app.downloadUrl;
+            document.getElementById('appDesc').value = app.description || '';
+
+            // Features Populate
+            document.getElementById('showDownload').checked = app.showDownload !== false; // Default true
+            document.getElementById('showStudyNow').checked = app.showStudyNow === true; // Default false
+            document.getElementById('studyNowUrl').value = app.studyNowUrl || '';
+
+            // SEO Populate
+            document.getElementById('seoTitle').value = app.seoTitle || '';
+            document.getElementById('seoKeywords').value = app.seoKeywords || '';
+            document.getElementById('seoDesc').value = app.seoDesc || '';
+
+            // UI Changes
+            document.getElementById('formTitle').innerText = "Edit App";
+            document.getElementById('submitBtn').innerText = "Update App";
+            document.getElementById('submitBtn').classList.remove('btn-download');
+            document.getElementById('submitBtn').classList.add('btn-edit');
+
+            showSection('add');
+        }
+
+        function resetForm() {
+            document.getElementById('appForm').reset();
+            document.getElementById('editIndex').value = "-1";
+            document.getElementById('formTitle').innerText = "Add New App";
+            document.getElementById('submitBtn').innerText = "Add App";
+            document.getElementById('submitBtn').classList.add('btn-download');
+            document.getElementById('submitBtn').classList.remove('btn-edit');
+            showSection('manage');
+        }
+
+        // --- Form Submission ---
+        document.getElementById('appForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const index = parseInt(document.getElementById('editIndex').value);
+
+            const appData = {
+                id: document.getElementById('appId').value,
+                name: document.getElementById('appName').value,
+                developer: document.getElementById('appDev').value,
+                version: document.getElementById('appVer').value,
+                size: document.getElementById('appSize').value,
+                downloads: document.getElementById('appDl').value,
+                tags: document.getElementById('appTags').value.split(',').map(s => s.trim()),
+                iconUrl: document.getElementById('appIcon').value,
+                downloadUrl: document.getElementById('appLink').value,
+                description: document.getElementById('appDesc').value,
+                showDownload: document.getElementById('showDownload').checked,
+                showStudyNow: document.getElementById('showStudyNow').checked,
+                studyNowUrl: document.getElementById('studyNowUrl').value,
+                // SEO Data
+                seoTitle: document.getElementById('seoTitle').value,
+                seoKeywords: document.getElementById('seoKeywords').value,
+                seoDesc: document.getElementById('seoDesc').value
+            };
+
+            if (index >= 0) {
+                // Update
+                appsData[index] = appData;
+                logAction(`Updated app: ${appData.name}`);
+            } else {
+                // Add
+                appsData.unshift(appData);
+                logAction(`Added new app: ${appData.name}`);
+            }
+
+            saveToStorage();
+
+            renderTable();
+            resetForm();
+            alert("Success! Don't forget to 'Save Changes' to download the file.");
+        });
+
+        // --- History ---
+        function logAction(msg) {
+            const time = new Date().toLocaleTimeString();
+            history.unshift({ time, msg });
+            renderHistory();
+        }
+
+        function renderHistory() {
+            const list = document.getElementById('historyLog');
+            if (history.length === 0) return;
+            list.innerHTML = '';
+            history.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'history-item';
+                li.innerHTML = `<span>${item.msg}</span> <span class="history-time">${item.time}</span>`;
+                list.appendChild(li);
+            });
+        }
+
+        // --- Export ---
+        // --- Export ---
+        function exportData() {
+            const timestamp = new Date().toLocaleString();
+            const dataStr = `window.lastUpdated = "${timestamp}";\nwindow.appsData = ` + JSON.stringify(appsData, null, 2) + ";";
+            downloadFile(dataStr, "data.js", "application/javascript");
+            logAction("Exported data.js file");
+        }
+
+        function exportJSON() {
+            const dataStr = JSON.stringify(appsData, null, 2);
+            downloadFile(dataStr, "apps.json", "application/json");
+            logAction("Exported apps.json file");
+        }
+
+        function downloadFile(content, fileName, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+
+</html>

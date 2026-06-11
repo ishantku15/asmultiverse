@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Key</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@500&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8faff;
+            /* Very light blueish grey */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            margin: 20px;
+        }
+
+        .top-accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #4cc9f0, #4361ee);
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+        }
+
+        .key-icon {
+            width: 48px;
+            height: 48px;
+            fill: #4361ee;
+        }
+
+        h1 {
+            color: #1f2937;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+
+        p.subtitle {
+            color: #6b7280;
+            font-size: 14px;
+            margin: 0 0 30px 0;
+        }
+
+        .key-box {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+            font-weight: 500;
+            color: #111827;
+            letter-spacing: 1px;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background-color: #4361ee;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 20px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: background-color 0.2s;
+            margin-bottom: 25px;
+        }
+
+        .copy-btn:hover {
+            background-color: #3a56d4;
+        }
+
+        .warning-box {
+            background-color: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: left;
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .info-icon {
+            min-width: 20px;
+            width: 20px;
+            height: 20px;
+            fill: #d97706;
+            margin-top: 2px;
+        }
+
+        .warning-text {
+            color: #92400e;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: #9ca3af;
+            font-size: 12px;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-icon {
+            width: 14px;
+            height: 14px;
+            fill: #9ca3af;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="top-accent"></div>
+
+        <div class="icon-container">
+            <!-- Key Icon SVG -->
+            <svg class="key-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M7 14C5.9 14 5 13.1 5 12C5 10.9 5.9 10 7 10C8.1 10 9 10.9 9 12C9 13.1 8.1 14 7 14ZM12.6 10C11.8 7.7 9.6 6 7 6C3.7 6 1 8.7 1 12C1 15.3 3.7 18 7 18C9.6 18 11.8 16.3 12.6 14H16V18H20V14H23V10H12.6Z" />
+            </svg>
+        </div>
+
+        <h1>Your Authentication Key</h1>
+        <p class="subtitle">Your Auth Key is generated and ready to use in the app.</p>
+
+        <div class="key-box" id="keyDisplay">
+            Generating...
+        </div>
+
+        <button class="copy-btn" onclick="copyKey()">
+            <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" />
+            </svg>
+            Copy Auth Key
+        </button>
+
+        <div class="warning-box">
+            <svg class="info-icon" viewBox="0 0 24 24">
+                <path
+                    d="M11 15H13V17H11V15ZM11 7H13V13H11V7ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" />
+            </svg>
+            <span class="warning-text">
+                This Auth Key is specifically generated for your current device and will only function on it. If you try
+                to use this key on any other device, it will be rejected and marked as invalid.
+            </span>
+        </div>
+
+        <div class="footer">
+            <div class="footer-item">
+                <svg class="footer-icon" viewBox="0 0 24 24">
+                    <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" />
+                </svg>
+                Valid for 48 Hours
+            </div>
+            <div class="footer-item">
+                <svg class="footer-icon" viewBox="0 0 24 24">
+                    <path
+                        d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 11.99H19C18.47 16.11 15.72 19.78 12 20.93V12H5V6.3L12 3.19V11.99Z" />
+                </svg>
+                Secure connection
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const keys = [
+            "54QKMOQGR5I2GW06",
+            "A1B2C3D4E5F6G7H8",
+            "9I8H7G6F5E4D3C2B",
+            "X1Y2Z3A4B5C6D7E8",
+            "M9N8O7P6Q5R4S3T2",
+            "K1L2M3N4O5P6Q7R8",
+            "J9I8H7G6F5E4D3C2",
+            "U1V2W3X4Y5Z6A7B8",
+            "T9S8R7Q6P5O4N3M2",
+            "D1E2F3G4H5I6J7K8",
+            "C9B8A7Z6Y5X4W3V2",
+            "L1M2N3O4P5Q6R7S8",
+            "S9R8Q7P6O5N4M3L2",
+            "E1F2G3H4I5J6K7L8",
+            "B9A8Z7Y6X5W4V3U2",
+            "Q1R2S3T4U5V6W7X8",
+            "P9O8N7M6L5K4J3I2",
+            "F1G2H3I4J5K6L7M8",
+            "A9Z8Y7X6W5V4U3T2",
+            "R1S2T3U4V5W6X7Y8",
+            "O9N8M7L6K5J4I3H2",
+            "G1H2I3J4K5L6M7N8",
+            "Y9X8W7V6U5T4S3R2",
+            "H1I2J3K4L5M6N7O8",
+            "Z9Y8X7W6V5U4T3S2"
+        ];
+
+        function generateKey() {
+            const display = document.getElementById('keyDisplay');
+            // Select random key
+            const randomIndex = Math.floor(Math.random() * keys.length);
+            display.innerText = keys[randomIndex];
+
+            // Optionally save to local storage to persist the same key for the user
+            // localStorage.setItem('authKey', keys[randomIndex]);
+        }
+
+        function copyKey() {
+            const keyText = document.getElementById('keyDisplay').innerText;
+            navigator.clipboard.writeText(keyText).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Copied!';
+                btn.style.backgroundColor = '#10b981'; // Green color
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.backgroundColor = '#4361ee';
+                }, 2000);
+            });
+        }
+
+        // Generate on load
+        window.onload = generateKey;
+    </script>
+</body>
+
+</html>

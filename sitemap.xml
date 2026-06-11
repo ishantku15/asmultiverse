@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ══ CORE PAGES ══════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://asmultiverse.in/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://asmultiverse.in/index.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://asmultiverse.in/about.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://asmultiverse.in/contact.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://asmultiverse.in/privacy.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://asmultiverse.in/terms.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://asmultiverse.in/thankyou.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <!-- ══ APP DETAIL PAGES ════════════════════════════════════ -->
+
+  <!-- AS Multiverse (flagship) -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=as-multiverse</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://d2bps9p1kiy4ka.cloudfront.net/5b09189f7285894d9130ccd0/e00a5c58-461c-4c43-a911-d606e00ad53b.png</image:loc>
+      <image:title>AS Multiverse App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- IshiTube -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=Ishitube</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://raw.githubusercontent.com/ishantkr15/icons/refs/heads/main/IshiTube.png</image:loc>
+      <image:title>IshiTube YouTube Mod APK Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Apna College -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=apna-college-mod-apk</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://i.ibb.co/0y74Ks8X/x.jpg</image:loc>
+      <image:title>Apna College Mod APK Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Next Toppers -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=next-toppers</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <image:image>
+      <image:loc>https://i.postimg.cc/W3v5fRYr/square-icon.png</image:loc>
+      <image:title>Next Toppers App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- NextTopper Mod APK (new) -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=NextTopper%20Mod%20APK</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <image:image>
+      <image:loc>https://i.ibb.co/7d3ByN3b/Chat-GPT-Image-Jun-1-2026-05-57-16-PM.png</image:loc>
+      <image:title>NextTopper Mod APK Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Khan Global Studies -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=Khan%20Global%20Studies</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+    <image:image>
+      <image:loc>https://d2bps9p1kiy4ka.cloudfront.net/5b09189f7285894d9130ccd0/67a2a82f-5eca-4804-9d47-69f05e3831d1.png</image:loc>
+      <image:title>Khan Global Studies App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Science and Fun (new) -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=Science_and_fun</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://i.ibb.co/j9x0227R/Chat-GPT-Image-Jun-2-2026-10-00-52-PM.png</image:loc>
+      <image:title>Science and Fun by Ashu Sir Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Alarmy -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=Alarmy</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://play-lh.googleusercontent.com/gXJLTDIvxXTK6uKl2e3Od_zmrlEul1CbkgxWxjbGeDzLl4EMFsdfER2VEgqAue2v1TE=w240-h480-rw</image:loc>
+      <image:title>Alarmy Mod APK Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Selection Way -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=selection-way</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://i.ibb.co/60cF3WS2/x.jpg</image:loc>
+      <image:title>Selection Way App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Rojgar With Ankit -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=rojgar-with-ankit</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://i.postimg.cc/cLytYbpL/20231229-165646.jpg</image:loc>
+      <image:title>Rojgar With Ankit App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Utkarsh Classes -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=Utkarsh%20Classes</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://i.postimg.cc/wv3XtmG8/20260217-013950.jpg</image:loc>
+      <image:title>Utkarsh Classes App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Mission JEET -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=Mission%20JEET</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://i.postimg.cc/26F5zTH7/4661462-1-Mission-JEET-Logo.png</image:loc>
+      <image:title>Mission JEET App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- PW4FREE -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=pw4free</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://i.ibb.co/cX6nq0Hp/Chat-GPT-Image-May-12-2026-06-02-23-PM.png</image:loc>
+      <image:title>PW4FREE App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- AS Multiverse Infinity -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=asmutliverseinfinity</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://i.ibb.co/v6q9k0jP/x.jpg</image:loc>
+      <image:title>AS Multiverse Infinity App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- VidyaKul -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=vidyakul</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://i.postimg.cc/Vkm2545X/20250929-160150.jpg</image:loc>
+      <image:title>VidyaKul App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- KD Live -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=kd-live</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://i.postimg.cc/65HVCbLY/20250923-192017.jpg</image:loc>
+      <image:title>KD Live App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Education Baba -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=education-baba</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://i.ibb.co/9kSMLvKQ/x.jpg</image:loc>
+      <image:title>Education Baba App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Career Will -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=Career%20Will</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://i.postimg.cc/D0ghh7s2/IMG-20250927-222606.jpg</image:loc>
+      <image:title>Career Will App Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Study IQ -->
+  <url>
+    <loc>https://asmultiverse.in/details.html?id=study-iq</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://i.ibb.co/qLdK3Q1d/x.jpg</image:loc>
+      <image:title>Study IQ App Icon</image:title>
+    </image:image>
+  </url>
+
+</urlset>

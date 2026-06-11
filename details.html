@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6608561504651468"
+     crossorigin="anonymous"></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K59VLNJ6');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    <title>Educational App Details | As Multiverse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="data.js" as="script">
+
+    <style>
+        /* How to Download Button */
+        .btn-how-to-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 1rem;
+            padding: 0.9rem 2rem;
+            background: linear-gradient(135deg, #ff6b35, #f7c948);
+            color: #1a1a2e;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            text-decoration: none;
+        }
+
+        .btn-how-to-download:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+        }
+
+        .btn-how-to-download i {
+            font-size: 1.2rem;
+        }
+
+        /* Video Modal Overlay */
+        .video-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            animation: fadeInModal 0.3s ease;
+        }
+
+        .video-modal-overlay.active {
+            display: flex;
+        }
+
+        @keyframes fadeInModal {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .video-modal {
+            background: rgba(18, 18, 45, 0.95);
+            border: 1px solid rgba(123, 77, 255, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        .video-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .video-modal-header h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .video-modal-header h3 i {
+            color: #ff6b35;
+        }
+
+        .video-modal-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-modal-close:hover {
+            background: rgba(255, 82, 82, 0.3);
+            border-color: #ff5252;
+            color: #ff5252;
+        }
+
+        .video-modal .video-wrapper {
+            position: relative;
+            padding-bottom: 177.78%;
+            height: 0;
+            max-height: 75vh;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .video-modal .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+        /* Ad Container Styles */
+        .ad-block {
+            margin: 2rem auto;
+            padding: 1rem;
+            max-width: 728px;
+            text-align: center;
+            background: rgba(18, 18, 45, 0.4);
+            border-radius: 12px;
+            border: 1px solid rgba(123, 77, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .ad-block .ad-label {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .ad-block {
+                margin: 1.5rem auto;
+                padding: 0.8rem;
+                border-radius: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K59VLNJ6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" class="logo-link" aria-label="Go to homepage"
+                style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text);">
+                <i class="fas fa-meteor" style="color: #7b4dff;"></i>
+                <h1 style="font-size: 1.8rem; margin: 0;">AS <span
+                        style="color: transparent; background: linear-gradient(90deg, var(--primary), var(--secondary)); -webkit-background-clip: text; background-clip: text;">MULTIVERSE</span>
+                </h1>
+            </a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation menu"
+            style="display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index.html#appGrid"><i class="fas fa-mobile-alt"></i> Apps</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-comment"></i> Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Main Content -->
+    <main class="detail-main">
+        <div class="container detail-container" id="detailContent">
+            <div class="loading" aria-live="polite">Loading app details...</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-meteor"></i>
+                    <h3>AS MULTIVERSE</h3>
+                </div>
+                <p class="footer-description">
+                    Your trusted source for free educational applications and learning resources.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="Follow us on GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-star"></i> Featured Apps</a></li>
+                    <li><a href="#"><i class="fas fa-graduation-cap"></i> Educational</a></li>
+                    <li><a href="#"><i class="fas fa-gamepad"></i> Entertainment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    <li><a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                    <li><a href="#"><i class="fas fa-cookie-bite"></i> Cookie Policy</a></li>
+                    <li><a href="#"><i class="fas fa-exclamation-circle"></i> Disclaimer</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact & Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-bug"></i> Report Issue</a></li>
+                    <li><a href="#"><i class="fas fa-lightbulb"></i> Suggest App</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> AsMultiverse. All rights reserved.</p>
+            <p class="footer-note">
+                All trademarks, logos, and brand names are property of their respective owners.
+                Apps are for educational purposes only.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating Instagram Icon -->
+    <a href="https://www.instagram.com/asmultiverse.in/" target="_blank" class="floating-instagram"
+        aria-label="Follow us on Instagram">
+        <span class="follow-text">Follow Us</span>
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- How to Download Video Modal -->
+    <div class="video-modal-overlay" id="videoModalOverlay">
+        <div class="video-modal">
+            <div class="video-modal-header">
+                <h3><i class="fas fa-play-circle"></i> How to Download</h3>
+                <button class="video-modal-close" onclick="closeVideoModal()" aria-label="Close video">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="video-wrapper">
+                <iframe id="ytPlayer" src="" title="How to Download - Tutorial" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const appId = params.get('id');
+            const container = document.getElementById('detailContent');
+
+            if (!appId) {
+                container.innerHTML = `
+                    <div class="error-state">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h2>App not found</h2>
+                        <p>The requested app could not be located.</p>
+                        <a href="index.html" class="btn btn-primary">Browse All Apps</a>
+                    </div>`;
+                return;
+            }
+
+            // Using global data from data.js
+            const apps = window.appsData || [];
+            const app = apps.find(a => a.id === appId);
+
+            if (app) {
+                // SEO Setup
+                document.title = app.seoTitle ? app.seoTitle : `${app.name} | Free Educational App - As Multiverse`;
+
+                // Update meta description
+                let metaDesc = document.querySelector('meta[name="description"]');
+                if (!metaDesc) {
+                    metaDesc = document.createElement('meta');
+                    metaDesc.name = "description";
+                    document.head.appendChild(metaDesc);
+                }
+                metaDesc.content = app.seoDesc || `Download ${app.name} ${app.version} — free educational app with full features. Available exclusively at As Multiverse. Start your learning journey today.`;
+
+                // Update meta keywords
+                let metaKeys = document.querySelector('meta[name="keywords"]');
+                if (!metaKeys) {
+                    metaKeys = document.createElement('meta');
+                    metaKeys.name = "keywords";
+                    document.head.appendChild(metaKeys);
+                }
+                metaKeys.content = app.seoKeywords || `${app.name}, free educational app, learning resources, app download, As Multiverse, ${app.category}`;
+
+                // Render app details
+                container.innerHTML = `
+                    <!-- PREMIUM APP HERO -->
+                    <div class="premium-detail-hero">
+                        <div class="hero-backdrop" style="background-image: url('${app.iconUrl}')"></div>
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <img src="${app.iconUrl}" alt="${app.name} Icon" class="hero-icon" onerror="this.src='https://via.placeholder.com/120/7b4dff/ffffff?text=${encodeURIComponent(app.name.substring(0, 1))}'">
+                            <div class="hero-info">
+                                <h1 class="hero-title">${app.name}</h1>
+                                <p class="hero-developer">${app.developer}</p>
+                                <div class="hero-rating">
+                                    ${Array.from({ length: 5 }, (_, i) => `<i class="fas fa-star${i < 4 ? '' : '-half-alt'}"></i>`).join('')}
+                                    <span class="rating-text">4.8 (1.2k)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card premium-detail-card">
+                        <div class="premium-meta-grid">
+                            <div class="meta-item">
+                                <i class="fas fa-code-branch meta-icon"></i>
+                                <span class="meta-label">Version</span>
+                                <span class="meta-value">${app.version}</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-download meta-icon"></i>
+                                <span class="meta-label">Downloads</span>
+                                <span class="meta-value">${app.downloads}</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-hdd meta-icon"></i>
+                                <span class="meta-label">Size</span>
+                                <span class="meta-value">${app.size}</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt meta-icon"></i>
+                                <span class="meta-label">Updated</span>
+                                <span class="meta-value">${app.lastUpdated || 'Recently'}</span>
+                            </div>
+                        </div>
+
+                        <div class="premium-action-bar">
+                            ${app.showStudyNow === true ? `
+                            <a href="${app.studyNowUrl}" class="btn btn-premium-study" target="_blank">
+                                <i class="fas fa-book-reader"></i> STUDY NOW
+                            </a>` : ''}
+                            
+                            ${app.showDownload !== false ? `
+                            <a href="${app.downloadUrl}" class="btn btn-premium-download">
+                                <i class="fas fa-cloud-download-alt"></i> DOWNLOAD NOW
+                            </a>
+                            <button class="btn-how-to-download-small" onclick="openVideoModal()">
+                                <i class="fas fa-play-circle"></i> How to Install
+                            </button>` : ''}
+                        </div>
+
+                        <div class="premium-detail-content">
+                            <h3><i class="fas fa-info-circle"></i> About this App</h3>
+                            <div class="description-content">
+                                <div class="in-article-ad premium-ad-container" style="padding: 0; border-radius: 12px; margin-top: 0; min-height: 250px;">
+                                    <span class="premium-ad-label" style="top: 0.2rem; right: 0.5rem;">Sponsored</span>
+                                    <ins class="adsbygoogle"
+                                         style="display:block; text-align:center;"
+                                         data-ad-layout="in-article"
+                                         data-ad-format="fluid"
+                                         data-ad-client="ca-pub-6608561504651468"
+                                         data-ad-slot="7626019470"></ins>
+                                </div>
+                                ${app.description}
+                            </div>
+                            
+                            ${app.features ? `
+                            <div class="premium-features-section">
+                                <h3><i class="fas fa-star"></i> Key Features</h3>
+                                <ul class="premium-features-list">
+                                    ${app.features.map(feature => `<li><i class="fas fa-check-circle"></i> ${feature}</li>`).join('')}
+                                </ul>
+                            </div>` : ''}
+                        </div>
+
+                        <div class="app-tags">
+                            ${app.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Banner Ad -->
+                    <div class="premium-ad-container" style="margin-top: 2rem;">
+                        <span class="premium-ad-label">Sponsored</span>
+                        
+                        <div class="ad-desktop-only">
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block; width:100%; height:90px"
+                                 data-ad-client="ca-pub-6608561504651468"
+                                 data-ad-slot="5157427363"></ins>
+                        </div>
+                        
+                        <div class="ad-mobile-only">
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block; width:100%; height:250px"
+                                 data-ad-client="ca-pub-6608561504651468"
+                                 data-ad-slot="5157427363"></ins>
+                        </div>
+                    </div>
+
+                    ${apps.filter(a => a.id !== app.id).length > 0 ? `
+                    <div class="related-apps-section">
+                        <h3><i class="fas fa-thumbs-up"></i> You Might Also Like</h3>
+                        <div class="related-apps-grid" id="relatedApps">
+                            <!-- Related apps will be populated here -->
+                        </div>
+                    </div>
+                    </div>` : ''}
+                `;
+
+                // Track download clicks for analytics
+                setTimeout(() => {
+                    const downloadBtn = document.querySelector('.btn-download-main');
+                    if (downloadBtn) {
+                        downloadBtn.addEventListener('click', function() {
+                            // Fire ad impression event on download click
+                            if (typeof gtag !== 'undefined') {
+                                gtag('event', 'download_click', {
+                                    'event_category': 'Conversion',
+                                    'event_label': app.name,
+                                    'value': 1
+                                });
+                            }
+                        });
+                    }
+                }, 200);
+
+                // Add JSON-LD Schema for SEO
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "SoftwareApplication",
+                    "name": app.name,
+                    "applicationCategory": "EducationalApplication",
+                    "operatingSystem": "Android",
+                    "description": app.description,
+                    "image": app.iconUrl,
+                    "author": {
+                        "@type": "Organization",
+                        "name": app.developer
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "4.8",
+                        "ratingCount": "1200"
+                    }
+                };
+
+                const script = document.createElement('script');
+                script.type = "application/ld+json";
+                script.text = JSON.stringify(schema);
+                document.head.appendChild(script);
+
+                // Add Open Graph meta tags
+                const ogTags = [
+                    { property: "og:title", content: app.seoTitle || app.name },
+                    { property: "og:description", content: app.seoDesc || app.description.substring(0, 160) },
+                    { property: "og:image", content: app.iconUrl },
+                    { property: "og:url", content: window.location.href },
+                    { property: "og:type", content: "website" },
+                    { property: "og:site_name", content: "As Multiverse" },
+                    { property: "twitter:card", content: "summary_large_image" },
+                    { property: "twitter:title", content: app.seoTitle || app.name },
+                    { property: "twitter:description", content: app.seoDesc || app.description.substring(0, 160) },
+                    { property: "twitter:image", content: app.iconUrl }
+                ];
+
+                ogTags.forEach(tag => {
+                    let meta = document.querySelector(`meta[property="${tag.property}"]`) ||
+                        document.querySelector(`meta[name="${tag.property}"]`);
+                    if (!meta) {
+                        meta = document.createElement('meta');
+                        if (tag.property.startsWith('og:')) {
+                            meta.setAttribute('property', tag.property);
+                        } else {
+                            meta.setAttribute('name', tag.property);
+                        }
+                        document.head.appendChild(meta);
+                    }
+                    meta.content = tag.content;
+                });
+
+                // Render Related Apps
+                setTimeout(() => {
+                    const relatedContainer = document.getElementById('relatedApps');
+                    if (relatedContainer) {
+                        // Find related apps by tags or category
+                        const related = apps
+                            .filter(a => a.id !== app.id)
+                            .sort((a, b) => {
+                                // Priority: same category > shared tags > random
+                                const categoryMatch = a.category === app.category ? -1 : 1;
+                                const tagMatches = a.tags.filter(t => app.tags.includes(t)).length;
+                                return categoryMatch || b.tags.length - tagMatches;
+                            })
+                            .slice(0, 4);
+
+                        related.forEach(r => {
+                            const rCard = document.createElement('a');
+                            rCard.href = `details.html?id=${r.id}`;
+                            rCard.className = 'related-card';
+                            rCard.innerHTML = `
+                                <div class="related-card-inner">
+                                    <img src="${r.iconUrl}" alt="${r.name}" 
+                                         onerror="this.src='https://via.placeholder.com/60/7b4dff/ffffff?text=${encodeURIComponent(r.name.substring(0, 1))}'">
+                                    <div class="related-card-info">
+                                        <h4>${r.name}</h4>
+                                        <p class="related-card-category">${r.category}</p>
+                                        <div class="related-card-meta">
+                                            <span><i class="fas fa-download"></i> ${r.downloads}</span>
+                                            <span><i class="fas fa-hdd"></i> ${r.size}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            relatedContainer.appendChild(rCard);
+                        });
+                    }
+
+                    // Initialize all ad units on the page
+                    document.querySelectorAll('.adsbygoogle').forEach(ad => {
+                        try {
+                            if (ad.innerHTML === '') {
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            }
+                        } catch (e) {
+                            console.error("AdSense init error:", e);
+                        }
+                    });
+                }, 100);
+
+            } else {
+                container.innerHTML = `
+                    <div class="error-state">
+                        <i class="fas fa-search"></i>
+                        <h2>App Not Found</h2>
+                        <p>The requested app is not available in our database.</p>
+                        <a href="index.html" class="btn btn-primary">Browse Available Apps</a>
+                    </div>`;
+            }
+        });
+
+        // Error handling for failed image loads
+        document.addEventListener('error', function (e) {
+            if (e.target.tagName === 'IMG' && e.target.classList.contains('detail-icon')) {
+                const appName = document.querySelector('.detail-title')?.textContent || 'App';
+                const firstLetter = appName.charAt(0).toUpperCase();
+                e.target.src = `https://via.placeholder.com/120/7b4dff/ffffff?text=${encodeURIComponent(firstLetter)}`;
+            }
+        }, true);
+    </script>
+
+    <script>
+        // Video Modal Logic
+        function openVideoModal() {
+            const overlay = document.getElementById('videoModalOverlay');
+            const player = document.getElementById('ytPlayer');
+            player.src = 'https://www.youtube.com/embed/Kf0DV4OCfg0?autoplay=1&rel=0';
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const overlay = document.getElementById('videoModalOverlay');
+            const player = document.getElementById('ytPlayer');
+            player.src = '';
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on overlay click
+        document.getElementById('videoModalOverlay').addEventListener('click', function (e) {
+            if (e.target === this) closeVideoModal();
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeVideoModal();
+        });
+    </script>
+</body>
+
+
+</html>
+
