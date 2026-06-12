@@ -4,15 +4,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     let appsData = [];
 
-    // Load Apps from Global Data (data.js)
-    // Load Apps from Global Data (data.js)
-    if (window.appsData) {
-        appsData = window.appsData;
+    // Load Apps from Global Data (data.js) or Firebase
+    if (typeof db !== 'undefined' && db !== null) {
+        // Fetch from Firebase
+        console.log("Fetching apps from Firebase...");
+        db.collection("apps").get().then((querySnapshot) => {
+            appsData = [];
+            querySnapshot.forEach((doc) => {
+                appsData.push(doc.data());
+            });
+            
+            if (appsData.length === 0 && window.appsData) {
+                console.warn("Firebase collection is empty. Falling back to data.js");
+                appsData = window.appsData;
+            }
+            renderApps(appsData);
+        }).catch((error) => {
+            console.error("Error fetching from Firebase: ", error);
+            appsData = window.appsData || [];
+            renderApps(appsData);
+        });
     } else {
-        console.warn('appsData not found. Checking if data.js is loaded.');
-        appsData = [];
+        // Fallback to data.js
+        if (window.appsData) {
+            appsData = window.appsData;
+        } else {
+            console.warn('appsData not found. Checking if data.js is loaded.');
+            appsData = [];
+        }
+        renderApps(appsData);
     }
-    renderApps(appsData);
 
     // Search Functionality
     if (searchInput) {

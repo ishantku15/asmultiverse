@@ -37,15 +37,83 @@ a {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-3px) scale(1.1); }
+}
+
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 2px var(--secondary-color)); }
+    50% { filter: drop-shadow(0 0 10px var(--primary-color)); }
+    100% { filter: drop-shadow(0 0 2px var(--secondary-color)); }
+}
+
+/* Premium Icon Animations */
+i.fas, i.fab, i.fa-solid {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.4s ease, color 0.3s;
+    display: inline-block;
+}
+
+a:hover > i.fas, a:hover > i.fab, button:hover > i.fas, .app-card:hover i.fas {
+    transform: scale(1.2) translateY(-2px);
+    animation: pulseGlow 2s infinite alternate;
+}
+
+/* Premium Glassmorphism */
+.premium-glass {
+    background: rgba(22, 18, 51, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
 .app-card {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    background: rgba(17, 20, 29, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.05);
+    padding: 0;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.app-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(123, 77, 255, 0.2);
+    border-color: rgba(123, 77, 255, 0.3);
+}
+
+.app-card:hover::before {
+    opacity: 1;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
 }
 
 /* Navbar */
@@ -210,7 +278,7 @@ a {
     gap: 1.5rem;
 }
 
-.app-card {
+.app-card-old {
     background: #11141d; /* Very dark background */
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
@@ -222,7 +290,7 @@ a {
     flex-direction: column;
 }
 
-.app-card:hover {
+.app-card-old:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-color: rgba(255, 255, 255, 0.1);
@@ -337,12 +405,12 @@ a {
     max-width: 800px;
     margin: 3rem auto;
     padding: 2rem;
-    background: rgba(22, 18, 51, 0.7);
+    background: rgba(22, 18, 51, 0.4);
     border-radius: 20px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    /* More Glassmorphic */
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .detail-header {
