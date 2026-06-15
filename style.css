@@ -2881,3 +2881,47 @@ body {
         display: block !important;
     }
 }
+
+/* Desktop Side Ads */
+.desktop-side-ad {
+    display: none;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 240px;
+    z-index: 1000;
+}
+.desktop-side-ad-left {
+    left: 20px;
+}
+.desktop-side-ad-right {
+    right: 20px;
+}
+.desktop-side-ad img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.desktop-side-ad-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+@media (min-width: 1720px) {
+    .desktop-side-ad {
+        display: block;
+    }
+}

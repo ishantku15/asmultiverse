@@ -190,6 +190,21 @@
 </head>
 
 <body>
+    <!-- Desktop Side Ads -->
+    <div class="desktop-side-ad desktop-side-ad-left">
+        <button onclick="this.parentElement.style.display='none'" class="desktop-side-ad-close">X</button>
+        <div style="font-size:0.7rem; color:rgba(255,255,255,0.3); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.5rem; text-align:center;">Sponsored</div>
+        <a href="https://biwebloom.in/" target="_blank">
+            <img src="https://i.ibb.co/dsw1JY2f/Chat-GPT-Image-Jun-16-2026-04-34-32-AM.png" alt="BiWebloom Sponsored Ad">
+        </a>
+    </div>
+    <div class="desktop-side-ad desktop-side-ad-right">
+        <button onclick="this.parentElement.style.display='none'" class="desktop-side-ad-close">X</button>
+        <div style="font-size:0.7rem; color:rgba(255,255,255,0.3); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.5rem; text-align:center;">Sponsored</div>
+        <a href="https://biwebloom.in/" target="_blank">
+            <img src="https://i.ibb.co/dsw1JY2f/Chat-GPT-Image-Jun-16-2026-04-34-32-AM.png" alt="BiWebloom Sponsored Ad">
+        </a>
+    </div>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K59VLNJ6" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -420,16 +435,17 @@
                         <div class="premium-detail-content">
                             <h3><i class="fas fa-info-circle"></i> About this App</h3>
                             <div class="description-content">
-                                <div class="in-article-ad premium-ad-container" style="padding: 0; border-radius: 12px; margin-top: 0; min-height: 250px;">
-                                    <span class="premium-ad-label" style="top: 0.2rem; right: 0.5rem;">Sponsored</span>
-                                    <ins class="adsbygoogle"
-                                         style="display:block; text-align:center;"
-                                         data-ad-layout="in-article"
-                                         data-ad-format="fluid"
-                                         data-ad-client="ca-pub-6608561504651468"
-                                         data-ad-slot="7626019470"></ins>
-                                </div>
                                 ${app.description}
+                            </div>
+                            
+                            <div class="premium-ad-container" style="margin: 2rem auto; text-align: center;">
+                                <span class="premium-ad-label">Sponsored</span>
+                                <div class="custom-sponsor-ad" style="position: relative; width: 100%; margin: 0 auto; text-align: center;">
+                                    <button onclick="this.parentElement.parentElement.style.display='none'" style="position: absolute; top: -10px; right: -10px; background: #ff5252; color: white; border: none; border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold; z-index: 10; display: flex; align-items: center; justify-content: center;">X</button>
+                                    <a href="https://biwebloom.in/" target="_blank">
+                                        <img src="https://i.ibb.co/7tCQN5Sj/Chat-GPT-Image-Jun-16-2026-04-13-40-AM.png" alt="BiWebloom Sponsored Ad" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                                    </a>
+                                </div>
                             </div>
                             
                             ${app.features ? `
@@ -450,18 +466,11 @@
                     <div class="premium-ad-container" style="margin-top: 2rem;">
                         <span class="premium-ad-label">Sponsored</span>
                         
-                        <div class="ad-desktop-only">
-                            <ins class="adsbygoogle"
-                                 style="display:inline-block; width:100%; height:90px"
-                                 data-ad-client="ca-pub-6608561504651468"
-                                 data-ad-slot="5157427363"></ins>
-                        </div>
-                        
-                        <div class="ad-mobile-only">
-                            <ins class="adsbygoogle"
-                                 style="display:inline-block; width:100%; height:250px"
-                                 data-ad-client="ca-pub-6608561504651468"
-                                 data-ad-slot="5157427363"></ins>
+                        <div class="custom-sponsor-ad" style="position: relative; width: 100%; margin: 0 auto; text-align: center;">
+                            <button onclick="this.parentElement.parentElement.style.display='none'" style="position: absolute; top: -10px; right: -10px; background: #ff5252; color: white; border: none; border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold; z-index: 10; display: flex; align-items: center; justify-content: center;">X</button>
+                            <a href="https://biwebloom.in/" target="_blank">
+                                <img src="https://i.ibb.co/7tCQN5Sj/Chat-GPT-Image-Jun-16-2026-04-13-40-AM.png" alt="BiWebloom Sponsored Ad" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                            </a>
                         </div>
                     </div>
 
@@ -653,4 +662,7 @@
 
 
 </html>
+
+
+
 
