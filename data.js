@@ -35,7 +35,7 @@ window.appsData = [
     "iconUrl": "https://i.ibb.co/7d3ByN3b/Chat-GPT-Image-Jun-1-2026-05-57-16-PM.png",
     "downloadUrl": "https://vplink.in/nexttoppers",
     "description": "Download NextTopper Mod APK v24.12.2 with Premium Unlocked & No Ads. Access all study material, live classes, and mock tests for JEE, NEET & Board exam preparation completely free. No login required.",
-    "showDownload": true,
+    "showDownload": false,
     "showStudyNow": true,
     "studyNowUrl": "https://nexttoppers.asmultiverse.in/",
     "seoTitle": "NextTopper Mod APK v24.12.2 (Premium Unlocked, No Ads) Free Download 2026",
