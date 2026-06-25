@@ -33,9 +33,9 @@ window.appsData = [
       "Educational"
     ],
     "iconUrl": "https://i.ibb.co/7d3ByN3b/Chat-GPT-Image-Jun-1-2026-05-57-16-PM.png",
-    "downloadUrl": "https://vplink.in/nexttoppers",
+    "downloadUrl": "https://arolinks.com/NEXTtopper",
     "description": "Download NextTopper Mod APK v24.12.2 with Premium Unlocked & No Ads. Access all study material, live classes, and mock tests for JEE, NEET & Board exam preparation completely free. No login required.",
-    "showDownload": false,
+    "showDownload": true,
     "showStudyNow": true,
     "studyNowUrl": "https://nexttoppers.asmultiverse.in/",
     "seoTitle": "NextTopper Mod APK v24.12.2 (Premium Unlocked, No Ads) Free Download 2026",
@@ -54,9 +54,9 @@ window.appsData = [
       "Popular"
     ],
     "iconUrl": "https://i.postimg.cc/W3v5fRYr/square-icon.png",
-    "downloadUrl": "https://vplink.in/Nexttopperss",
+    "downloadUrl": "https://arolinks.com/NEXTtopper",
     "description": "Next Toppers is India's premier learning app for JEE, NEET, SSC, Board exam and competitive exam preparation. Get access to expert video lectures, comprehensive study material, practice tests and DPPs from top educators. Now with all premium features unlocked.",
-    "showDownload": false,
+    "showDownload": true,
     "showStudyNow": true,
     "studyNowUrl": "https://nexttoppers.asmultiverse.in/",
     "seoTitle": "Next Toppers Mod APK v15.21.6 (Premium Unlocked) Free Download 2026 — As Multiverse",
