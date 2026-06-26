@@ -94,13 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 adCard.style.animationDelay = `${(index + 1) * 0.1}s`;
                 adCard.innerHTML = `
                     <span class="premium-ad-label">Sponsored</span>
-                    <div class="custom-sponsor-ad" style="position: relative; width: 100%; margin: 10px auto; text-align: center;">
-                        <button onclick="this.parentElement.parentElement.style.display='none'" style="position: absolute; top: -10px; right: -10px; background: #ff5252; color: white; border: none; border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold; z-index: 10; display: flex; align-items: center; justify-content: center;">X</button>
-                        <a href="https://biwebloom.in/" target="_blank">
-                            <img src="https://i.ibb.co/7tCQN5Sj/Chat-GPT-Image-Jun-16-2026-04-13-40-AM.png" alt="BiWebloom Sponsored Ad" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                        </a>
-                    </div>
-                `;
+                    `;
                 grid.appendChild(adCard);
             }
         });
