@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 adCard.className = 'ad-card ad-mobile-only';
                 adCard.style.animationDelay = `${(index + 1) * 0.1}s`;
                 adCard.innerHTML = `
-                    <span class="premium-ad-label">Sponsored</span>
+                    \n<!-- Google In-Feed Ad -->\n<div class=\"ad-label\" style=\"text-align:center; font-size: 0.7rem; color: rgba(255, 255, 255, 0.3); margin-bottom: 5px;\">Sponsored</div>\n<script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6608561504651468\" crossorigin=\"anonymous\"></script>\n<ins class=\"adsbygoogle\"\n     style=\"display:block\"\n     data-ad-format=\"fluid\"\n     data-ad-layout-key=\"-6t+ed+2i-1n-4w\"\n     data-ad-client=\"ca-pub-6608561504651468\"\n     data-ad-slot=\"1884895487\"></ins>\n<script>\n     (adsbygoogle = window.adsbygoogle || []).push({});\n</script>\n
                     `;
                 grid.appendChild(adCard);
             }
