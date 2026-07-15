@@ -1,4 +1,4 @@
-window.lastUpdated = "6/26/2026, 2:59:51 PM";
+window.lastUpdated = "7/15/2026, 9:55:17 AM";
 window.appsData = [
   {
     "id": "tutedude",
@@ -377,14 +377,9 @@ window.appsData = [
     "iconUrl": "https://i.postimg.cc/cLytYbpL/20231229-165646.jpg",
     "downloadUrl": "https://vplink.in/rwanewvwerison",
     "description": "Rojgar With Ankit (RWA) by Ankit Bhati Sir is India's most trusted competitive exam preparation app. Covering SSC, Banking, Railway, UPSC and all government exams with live classes, DPPs, notes and mock tests. Trusted by 30,000+ students — now with all premium features free.",
-    "features": [
-      "Live & recorded classes by Ankit Bhati Sir",
-      "SSC CGL, CHSL & MTS preparation",
-      "Banking, Railway & UPSC content",
-      "Daily Practice Problems (DPPs)",
-      "Comprehensive notes & PDFs",
-      "Mock tests with detailed solutions"
-    ],
+    "showDownload": true,
+    "showStudyNow": true,
+    "studyNowUrl": "https://rwa.asmultiverse.in/",
     "seoTitle": "Rojgar With Ankit Mod APK v10.21.6 (Premium Unlocked) — RWA Free Download 2026",
     "seoKeywords": "Rojgar With Ankit mod apk, RWA mod apk, Ankit Bhati Sir app free, Rojgar With Ankit premium unlocked, RWA SSC banking free, Rojgar With Ankit download 2026, Ankit sir competitive exam app, RWA latest version",
     "seoDesc": "Download Rojgar With Ankit Mod APK v10.21.6 — study SSC, Banking, Railway & UPSC with Ankit Bhati Sir. Live classes, DPPs & mock tests, premium unlocked. Trusted by 30K+ students. Free on As Multiverse."
