@@ -251,7 +251,7 @@ a:hover > i.fas, a:hover > i.fab, button:hover > i.fas, .app-card:hover i.fas {
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-muted);
     padding: 0.6rem 2rem;
-    border-radius: 8px;
+    
     cursor: pointer;
     font-weight: 500;
     transition: all 0.3s;
@@ -750,7 +750,7 @@ footer {
 
 /* Detail Card Improvements */
 .detail-card {
-    background: rgba(255, 255, 255, 0.02);
+    
     border-radius: 16px;
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -2569,7 +2569,7 @@ body {
     gap: 1rem;
     font-size: 1.05rem;
     color: #e0e0e0;
-    border: 1px solid rgba(255,255,255,0.05);
+    
 }
 
 @media (max-width: 768px) {
