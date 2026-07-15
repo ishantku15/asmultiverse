@@ -93,9 +93,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 adCard.className = 'ad-card ad-mobile-only';
                 adCard.style.animationDelay = `${(index + 1) * 0.1}s`;
                 adCard.innerHTML = `
-                    \n<span class="premium-ad-label">Sponsored</span><ins class=\"adsbygoogle\"\n     style=\"display:block\"\n     data-ad-format=\"fluid\"\n     data-ad-layout-key=\"-6t+ed+2i-1n-4w\"\n     data-ad-client=\"ca-pub-6608561504651468\"\n     data-ad-slot=\"1884895487\"></ins>\n<script>\n     (adsbygoogle = window.adsbygoogle || []).push({});\n</script>\n
-                    `;
+                    <span class="premium-ad-label">Sponsored</span>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-6t+ed+2i-1n-4w"
+                         data-ad-client="ca-pub-6608561504651468"
+                         data-ad-slot="1884895487"></ins>
+                `;
                 grid.appendChild(adCard);
+                
+                // Initialize AdSense unit safely after adding to DOM
+                setTimeout(() => {
+                    try {
+                        (window.adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {
+                        console.error('AdSense injection error:', e);
+                    }
+                }, 100);
             }
         });
 
