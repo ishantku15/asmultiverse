@@ -364,27 +364,6 @@ window.appsData = [
     "seoDesc": "Download Education Baba Mod APK v10.21.6 — India's best app for Bihar Board Class 11 & 12. Expert lectures, BSEB model papers & notes for PCM & PCB. Premium unlocked. Free on As Multiverse."
   },
   {
-    "id": "rojgar-with-ankits",
-    "name": "Rojgar With Ankit [RWA]",
-    "developer": "Ankit Bhati Sir",
-    "version": "v10.21.6",
-    "size": "25.18 MB",
-    "downloads": "30,000+",
-    "tags": [
-      "Educational",
-      "Popular"
-    ],
-    "iconUrl": "https://i.postimg.cc/cLytYbpL/20231229-165646.jpg",
-    "downloadUrl": "https://vplink.in/rwanewvwerison",
-    "description": "Rojgar With Ankit (RWA) by Ankit Bhati Sir is India's most trusted competitive exam preparation app. Covering SSC, Banking, Railway, UPSC and all government exams with live classes, DPPs, notes and mock tests. Trusted by 30,000+ students — now with all premium features free.",
-    "showDownload": true,
-    "showStudyNow": true,
-    "studyNowUrl": "https://rwa.asmultiverse.in/",
-    "seoTitle": "Rojgar With Ankit Mod APK v10.21.6 (Premium Unlocked) — RWA Free Download 2026",
-    "seoKeywords": "Rojgar With Ankit mod apk, RWA mod apk, Ankit Bhati Sir app free, Rojgar With Ankit premium unlocked, RWA SSC banking free, Rojgar With Ankit download 2026, Ankit sir competitive exam app, RWA latest version",
-    "seoDesc": "Download Rojgar With Ankit Mod APK v10.21.6 — study SSC, Banking, Railway & UPSC with Ankit Bhati Sir. Live classes, DPPs & mock tests, premium unlocked. Trusted by 30K+ students. Free on As Multiverse."
-  },
-  {
     "id": "selection-way",
     "name": "Selection Way",
     "developer": "Selection Way",
