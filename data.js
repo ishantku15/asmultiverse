@@ -364,7 +364,7 @@ window.appsData = [
     "seoDesc": "Download Education Baba Mod APK v10.21.6 — India's best app for Bihar Board Class 11 & 12. Expert lectures, BSEB model papers & notes for PCM & PCB. Premium unlocked. Free on As Multiverse."
   },
   {
-    "id": "rojgar-with-ankit",
+    "id": "rojgar-with-ankits",
     "name": "Rojgar With Ankit [RWA]",
     "developer": "Ankit Bhati Sir",
     "version": "v10.21.6",
