@@ -1,4 +1,4 @@
-window.lastUpdated = "7/19/2026, 8:43:26 AM";
+window.lastUpdated = "7/19/2026, 8:14:41 AM";
 window.appsData = [
   {
     "id": "tutedude",
@@ -32,7 +32,7 @@ window.appsData = [
       "Popular"
     ],
     "iconUrl": "https://d2bps9p1kiy4ka.cloudfront.net/5b09189f7285894d9130ccd0/e00a5c58-461c-4c43-a911-d606e00ad53b.png",
-    "downloadUrl": "https://arolinks.com/asmultiv",
+    "downloadUrl": "https://vplink.in/asmulti",
     "description": "AS Multiverse is your one-stop educational app store. Download free educational apps for JEE, NEET, SSC, Banking, Railway and competitive exam preparation. Access video lectures, notes, test series and study materials from India's top educators — all in one place. Trusted by 100K+ students across India.",
     "showDownload": true,
     "showStudyNow": true,
@@ -95,7 +95,7 @@ window.appsData = [
       "Educational"
     ],
     "iconUrl": "https://i.postimg.cc/26F5zTH7/4661462-1-Mission-JEET-Logo.png",
-    "downloadUrl": "https://arolinks.com/missionjeet",
+    "downloadUrl": "https://vplink.in/missionjeet",
     "description": "Mission JEET is a focused exam preparation app for students aspiring to clear competitive exams like JEE, NEET, SSC, and government job tests. Access structured courses, mock tests, DPPs and expert guidance — all for free with the modded version.",
     "showDownload": true,
     "showStudyNow": true,
@@ -116,11 +116,16 @@ window.appsData = [
       "Popular"
     ],
     "iconUrl": "https://i.ibb.co/v6q9k0jP/x.jpg",
-    "downloadUrl": "https://arolinks.com/infinity",
+    "downloadUrl": "https://vplink.in/infinity",
     "description": "AS Multiverse Infinity is the ultimate all-in-one educational platform giving students unlimited access to premium content from India's top educators. With 400,000+ downloads, it's one of India's most trusted free educational app hubs — covering JEE, NEET, UPSC, SSC, Banking and Board exam preparation.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "Unlimited educational content",
+      "400K+ downloads — student trusted",
+      "JEE, NEET, UPSC, SSC & Banking",
+      "Video lectures, notes & test series",
+      "All premium apps under one roof",
+      "No subscription or login needed"
+    ],
     "seoTitle": "AS Multiverse Infinity v1.02.7 — 400K+ Downloads, Free Educational App Hub 2026",
     "seoKeywords": "as multiverse infinity, asmultiverse infinity app, as multiverse infinity download, as multiverse infinity mod apk, as multiverse all apps free, asmultiverse free app 2026, as multiverse premium unlocked",
     "seoDesc": "Download AS Multiverse Infinity v1.02.7 — the ultimate free educational platform with 400K+ downloads. Access JEE, NEET, SSC, Banking & UPSC content from top educators. Completely free on asmultiverse.in."
@@ -162,11 +167,16 @@ window.appsData = [
       "Educational"
     ],
     "iconUrl": "https://i.postimg.cc/wv3XtmG8/20260217-013950.jpg",
-    "downloadUrl": "https://arolinks.com/utkarsh",
+    "downloadUrl": "https://vplink.in/utkarsh",
     "description": "Utkarsh Classes is India's leading platform for affordable sarkari exam preparation — covering Rajasthan, State & Central Government exams. Get structured courses, live classes, test series and exam-focused content from Utkarsh's expert faculty — now fully unlocked.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "Rajasthan & Central Govt exam prep",
+      "Live classes & recorded lectures",
+      "Structured course plans",
+      "Test series with detailed solutions",
+      "Expert faculty guidance",
+      "All premium content unlocked"
+    ],
     "seoTitle": "Utkarsh Classes Mod APK v2.21.6 (Premium Unlocked) — Sarkari Exam Prep Free 2026",
     "seoKeywords": "utkarsh classes mod apk, utkarsh classes premium unlocked, utkarsh classes free download, utkarsh classes app, utkarsh sarkari exam, utkarsh rajasthan exam, utkarsh govt exam prep free, UTK mod apk 2026",
     "seoDesc": "Download Utkarsh Classes Mod APK v2.21.6 — India's top platform for sarkari exam preparation. Access live classes, test series & structured courses for Rajasthan & Central Govt exams. Free on As Multiverse."
@@ -183,11 +193,16 @@ window.appsData = [
       "Popular"
     ],
     "iconUrl": "https://raw.githubusercontent.com/ishantkr15/icons/refs/heads/main/IshiTube.png",
-    "downloadUrl": "https://arolinks.com/ishitube",
+    "downloadUrl": "https://vplink.in/IshiTube",
     "description": "Download IshiTube, the advanced YouTube mod APK with a built-in video downloader (MP4/MP3), background play, ad-blocking, and all premium features unlocked. No root required. Safe & free 2026.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "Built-in MP4 & MP3 video downloader",
+      "Background play — music continues",
+      "Complete ad-blocking",
+      "YouTube Premium features unlocked",
+      "Picture-in-Picture (PiP) mode",
+      "No root required — safe install"
+    ],
     "seoTitle": "IshiTube APK v3.95 — Ad-Free YouTube with Built-in Video Downloader & Premium 2026",
     "seoKeywords": "ishitube apk, ishitube download, youtube mod apk with downloader, youtube premium free apk, background play youtube, ad free youtube app, download youtube videos offline, youtube mod no ads, youtube revanced alternative, ishitube latest version 2026, youtube video downloader app, ishitube premium unlocked, pip mode youtube",
     "seoDesc": "Download IshiTube v3.95 — the advanced YouTube mod with built-in MP4/MP3 downloader, background play, ad-blocking & all premium features unlocked. 1M+ downloads. No root required. Free on As Multiverse."
@@ -204,11 +219,16 @@ window.appsData = [
       "Educational"
     ],
     "iconUrl": "https://i.ibb.co/0y74Ks8X/x.jpg",
-    "downloadUrl": "https://arolinks.com/apnac",
+    "downloadUrl": "https://vplink.in/Apnacollege",
     "description": "Get all Apna College paid courses for free! Download the latest modded APK for 2026 with unlocked Delta 3.0, DSA, Java & Web Development courses. No subscription required. All premium features activated, ads removed, offline video downloads enabled.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "Delta 3.0 (DSA, Java, Web Dev) unlocked",
+      "All paid courses — completely free",
+      "Download videos for offline viewing",
+      "No subscription or login required",
+      "Ads fully removed",
+      "All premium features activated"
+    ],
     "seoTitle": "Apna College Mod APK v1.21.6 — All Courses Free (Delta 3.0, DSA, Java) 2026",
     "seoKeywords": "apna college mod apk, apna college premium unlocked apk, apna college all courses free download, apna college delta 3.0 mod, apna college paid courses free apk, apna college cracked app 2026, download apna college premium for free, apna college pro version apk, apna college DSA free, apna college Java free, apna college web dev free",
     "seoDesc": "Download Apna College Mod APK v1.21.6 — get all paid courses including Delta 3.0, DSA, Java & Web Development for free. No subscription required. All premium features unlocked. Available on As Multiverse."
@@ -224,11 +244,16 @@ window.appsData = [
       "Educational"
     ],
     "iconUrl": "https://i.postimg.cc/D0ghh7s2/IMG-20250927-222606.jpg",
-    "downloadUrl": "https://arolinks.com/carewwilll",
+    "downloadUrl": "https://vplink.in/care12343",
     "description": "Career Will is a comprehensive career guidance and competitive exam preparation app trusted by 90,000+ students. Get expert guidance for SSC, Banking, Railways, UPSC and all government exams. Access live classes, video lectures, test series and notes — all premium features unlocked.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "Career guidance & exam strategy",
+      "SSC, Banking, Railway & UPSC content",
+      "Live classes & recorded lectures",
+      "Test series with answer keys",
+      "Expert faculty notes & DPPs",
+      "Premium features fully unlocked"
+    ],
     "seoTitle": "Career Will App v14.21.06 (Premium Unlocked) — Free Career Guidance & Exam Prep 2026",
     "seoKeywords": "Career Will mod apk, Career Will app free, Career Will premium unlocked, Career Will SSC banking, Career Will UPSC, Career Will download 2026, career will app latest version, career guidance app free india",
     "seoDesc": "Download Career Will App v14.21.06 with all premium features unlocked. Get expert career guidance & exam prep for SSC, Banking, Railway & UPSC — trusted by 90K+ students. Free on As Multiverse."
@@ -246,11 +271,16 @@ window.appsData = [
       "Educational"
     ],
     "iconUrl": "https://d2bps9p1kiy4ka.cloudfront.net/5b09189f7285894d9130ccd0/67a2a82f-5eca-4804-9d47-69f05e3831d1.png",
-    "downloadUrl": "https://arolinks.com/kgss",
+    "downloadUrl": "https://vplink.in/kgskhansir",
     "description": "Khan Global Studies (KGS) by Khan Sir is India's most popular free education app. Learn from the legendary Khan Sir with live classes, recorded video lectures, DPPs, notes and test series for SSC, Railway, Banking, UPSC, and all competitive exams. Best teacher, free education — now with all premium features unlocked.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "Live classes by legendary Khan Sir",
+      "Recorded video lectures — SSC, UPSC, Railway",
+      "Daily Practice Problems (DPPs)",
+      "Comprehensive notes & PDFs",
+      "Full mock test series",
+      "All premium content fully unlocked"
+    ],
     "seoTitle": "Khan Global Studies Mod APK v22.21.06 — Khan Sir Free Classes (Premium Unlocked) 2026",
     "seoKeywords": "Khan Global Studies mod apk, Khan Sir app free, KGS mod apk, Khan Sir premium unlocked, Khan Global Studies download, Khan Sir live classes free, Khan Sir SSC app, Khan Sir UPSC app free, KGS latest version 2026, khan sir youtube app",
     "seoDesc": "Download Khan Global Studies Mod APK v22.21.06 — study with legendary Khan Sir for free. Live classes, DPPs & test series for SSC, Railway, Banking & UPSC. 100K+ downloads. Free on As Multiverse."
@@ -267,11 +297,16 @@ window.appsData = [
       "New"
     ],
     "iconUrl": "https://i.postimg.cc/Vkm2545X/20250929-160150.jpg",
-    "downloadUrl": "https://arolinks.com/vidhyakul",
+    "downloadUrl": "https://vplink.in/vidhyakul",
     "description": "VidyaKul is a comprehensive learning app for Class 9th to 12th students, JEE, NEET, AIIMS and competitive exam aspirants. Access expert video lectures, chapter-wise notes, DPPs, and full mock tests — all premium features unlocked and completely free.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "Class 9-12 full syllabus coverage",
+      "JEE & NEET expert video lectures",
+      "Chapter-wise notes & DPPs",
+      "AIIMS & competitive exam content",
+      "Mock tests with detailed solutions",
+      "Premium features fully unlocked"
+    ],
     "seoTitle": "VidyaKul Mod APK v10.21.6 (Premium Unlocked) — Class 9-12, JEE & NEET Free 2026",
     "seoKeywords": "VidyaKul mod apk, VidyaKul premium unlocked, VidyaKul free download, VidyaKul class 9 10 11 12, VidyaKul JEE NEET, VidyaKul AIIMS, VidyaKul latest version 2026, VK mod apk, vidyakul app free",
     "seoDesc": "Download VidyaKul Mod APK v10.21.6 with all premium features unlocked. Expert video lectures, notes & mock tests for Class 9-12, JEE & NEET. 100% free on As Multiverse — no subscription needed."
@@ -314,11 +349,16 @@ window.appsData = [
       "New"
     ],
     "iconUrl": "https://i.ibb.co/9kSMLvKQ/x.jpg",
-    "downloadUrl": "https://arolinks.com/edbababa",
+    "downloadUrl": "https://vplink.in/edbaba",
     "description": "Education Baba is the best app for Bihar Board Class 11th & 12th students. Get expert video lectures, chapter-wise notes, BSEB model papers, and practice tests for Physics, Chemistry, Maths and Biology — completely free with all premium features unlocked.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "Bihar Board Class 11th & 12th syllabus",
+      "Expert video lectures for PCM & PCB",
+      "BSEB model papers & previous years",
+      "Chapter-wise notes & solutions",
+      "Practice tests with answer keys",
+      "Premium content fully unlocked"
+    ],
     "seoTitle": "Education Baba Mod APK v10.21.6 — Bihar Board Class 11 & 12 Free Study App 2026",
     "seoKeywords": "Education Baba mod apk, Education Baba Bihar Board, Education Baba class 11 12 free, Education Baba premium unlocked, BSEB app free, Bihar Board study app, Education Baba download 2026, EB mod apk, bihar board app free",
     "seoDesc": "Download Education Baba Mod APK v10.21.6 — India's best app for Bihar Board Class 11 & 12. Expert lectures, BSEB model papers & notes for PCM & PCB. Premium unlocked. Free on As Multiverse."
@@ -335,7 +375,7 @@ window.appsData = [
       "Popular"
     ],
     "iconUrl": "https://i.postimg.cc/cLytYbpL/20231229-165646.jpg",
-    "downloadUrl": "https://arolinks.com/rwaaaaaa",
+    "downloadUrl": "https://vplink.in/rwanewvwerison",
     "description": "Rojgar With Ankit (RWA) by Ankit Bhati Sir is India's most trusted competitive exam preparation app. Covering SSC, Banking, Railway, UPSC and all government exams with live classes, DPPs, notes and mock tests. Trusted by 30,000+ students — now with all premium features free.",
     "showDownload": true,
     "showStudyNow": true,
@@ -356,11 +396,16 @@ window.appsData = [
       "Popular"
     ],
     "iconUrl": "https://i.ibb.co/60cF3WS2/x.jpg",
-    "downloadUrl": "https://arolinks.com/selectionwayyyyyyyy",
+    "downloadUrl": "https://vplink.in/selectionway",
     "description": "Selection Way is a powerful online learning platform for SSC, Banking, Railway, Police and other government competitive exams. Get structured courses, expert video lectures, chapter-wise DPPs, notes and full mock test series — all premium features unlocked and completely free.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "Structured courses for govt exams",
+      "Expert video lectures — SSC & Banking",
+      "Chapter-wise DPPs & notes",
+      "Railway & Police exam content",
+      "Full mock test series with solutions",
+      "All premium features unlocked"
+    ],
     "seoTitle": "Selection Way Mod APK v11.21.6 (Premium Unlocked) — Govt Exam Prep Free 2026",
     "seoKeywords": "Selection Way mod apk, Selection Way premium unlocked, Selection Way SSC banking free, Selection Way download 2026, SW mod apk, selection way competitive exam, selection way latest version, selection way free app",
     "seoDesc": "Download Selection Way Mod APK v11.21.6 with all premium features unlocked. Expert courses for SSC, Banking, Railway & Police exams. Trusted by 30K+ students. Completely free on As Multiverse."
@@ -398,11 +443,16 @@ window.appsData = [
       "New"
     ],
     "iconUrl": "https://i.ibb.co/qLdK3Q1d/x.jpg",
-    "downloadUrl": "https://arolinks.com/studyiqqq",
+    "downloadUrl": "https://vplink.in/studyiq",
     "description": "Study IQ Education is India's most loved education platform for UPSC, SSC, Banking, Teaching and all competitive exam preparation. Get access to expert video lectures, current affairs, mock tests and comprehensive study material from Study IQ's renowned faculty — all premium features unlocked.",
-    "showDownload": true,
-    "showStudyNow": false,
-    "studyNowUrl": "",
+    "features": [
+      "UPSC, SSC & Banking expert courses",
+      "Daily current affairs updates",
+      "Teaching exam preparation (CTET, TET)",
+      "Comprehensive video lectures",
+      "Mock tests & previous year papers",
+      "All premium content fully unlocked"
+    ],
     "seoTitle": "Study IQ Mod APK v2.21.6 (Premium Unlocked) — UPSC, SSC & Banking Free 2026",
     "seoKeywords": "Study IQ mod apk, Study IQ premium unlocked, Study IQ free download, Study IQ UPSC SSC, Study IQ education app, SIQ mod apk 2026, study iq current affairs free, study iq banking teaching exam, study iq latest version",
     "seoDesc": "Download Study IQ Mod APK v2.21.6 — India's most loved platform for UPSC, SSC, Banking & Teaching exams. Expert video lectures, current affairs & mock tests, all premium unlocked. Free on As Multiverse."
