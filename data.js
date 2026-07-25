@@ -1,5 +1,25 @@
-window.lastUpdated = "7/19/2026, 8:14:41 AM";
+window.lastUpdated = "7/25/2026, 11:22:22 PM";
 window.appsData = [
+  {
+    "id": "bookflow",
+    "name": "Book Flow",
+    "developer": "Ishant",
+    "version": "1",
+    "size": "NA",
+    "downloads": "NA",
+    "tags": [
+      "New"
+    ],
+    "iconUrl": "https://i.ibb.co/NgnnvLyQ/acc143f0-5447-4f14-9123-d4862c59dc9a.png",
+    "downloadUrl": "https://books.asmultiverse.in/",
+    "description": "📚 Welcome to BookFlow – Your Ultimate Digital Library!\n\nBookFlow gives students free access to hundreds of educational books for school and competitive exam preparation.\n\nWhether you're preparing for JEE, NEET, or studying in Class 9, 10, 11, or 12, BookFlow helps you find the books you need in one place.\n\nFeatures\n\n✅ Hundreds of Educational Books\n✅ JEE & NEET Preparation Books\n✅ NCERT Books\n✅ Class 9, 10, 11 & 12 Books\n✅ Popular Reference Books\n✅ Fast Search & Smart Filters\n✅ Clean & User-Friendly Interface\n✅ Mobile & Desktop Friendly\n✅ Completely Free to Use\n\nPerfect For\n\n📖 JEE Aspirants\n🩺 NEET Aspirants\n🏫 School Students (Class 9–12)\n🎓 Self Learners\n\nStart learning today with BookFlow and access your favourite educational books anytime, anywhere.",
+    "showDownload": false,
+    "showStudyNow": true,
+    "studyNowUrl": "https://books.asmultiverse.in/",
+    "seoTitle": "BookFlow – Free JEE, NEET, NCERT & Class 9–12 Educational Books",
+    "seoKeywords": "bookflow, book flow, free books, educational books, online library, digital library, JEE books, NEET books, NCERT books, class 9 books, class 10 books, class 11 books, class 12 books, CBSE books, reference books, study material, exam preparation, competitive exam books, physics books, chemistry books, maths books, biology books, Arihant books, educational resources, free study books, AS MultiverseBookFlow, Books, Digital Library, Education, JEE, NEET, NCERT, CBSE, Class 9, Class 10, Class 11, Class 12, Study Material, Reference Books, Competitive Exams, Physics, Chemistry, Mathematics, Biology, Free Learning, AS Multiverse",
+    "seoDesc": "BookFlow is a free digital library offering JEE, NEET, NCERT, Class 9–12 and educational reference books. Read hundreds of study books online with a fast and easy interface"
+  },
   {
     "id": "tutedude",
     "name": "TudeDude",
