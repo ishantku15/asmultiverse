@@ -254,7 +254,7 @@ window.appsData = [
     "seoDesc": "Download Apna College Mod APK v1.21.6 — get all paid courses including Delta 3.0, DSA, Java & Web Development for free. No subscription required. All premium features unlocked. Available on As Multiverse."
   },
   {
-    "id": "Career Will",
+    "id": "Career-Will",
     "name": "Career Will",
     "developer": "Career Will",
     "version": "14.21.06",
