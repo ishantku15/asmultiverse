@@ -52,11 +52,11 @@ window.appsData = [
       "Popular"
     ],
     "iconUrl": "https://d2bps9p1kiy4ka.cloudfront.net/5b09189f7285894d9130ccd0/e00a5c58-461c-4c43-a911-d606e00ad53b.png",
-    "downloadUrl": "https://vplink.in/asmulti",
+    "downloadUrl": "https://pwserverpage.ishant150407.workers.dev/",
     "description": "AS Multiverse is your one-stop educational app store. Download free educational apps for JEE, NEET, SSC, Banking, Railway and competitive exam preparation. Access video lectures, notes, test series and study materials from India's top educators — all in one place. Trusted by 100K+ students across India.",
     "showDownload": true,
     "showStudyNow": true,
-    "studyNowUrl": "https://pw.modgalaxy.in/",
+    "studyNowUrl": "https://pwserverpage.ishant150407.workers.dev/",
     "seoTitle": "AS Multiverse v5.02.7 — Free Educational Apps for JEE, NEET & Competitive Exams",
     "seoKeywords": "as multiverse, asmultiverse, as multiverse app, as multiverse store, asmultiverse.com, as multiverse website, as multiverse download, educational apps free, jee neet preparation app, competitive exam app, as multiverse 2026",
     "seoDesc": "Download AS Multiverse v5.02.7 — access 12+ free educational apps for JEE, NEET, SSC & competitive exams. Video lectures, notes & test series. Trusted by 100K+ students at asmultiverse.in."
