@@ -31,11 +31,11 @@ window.appsData = [
       "New"
     ],
     "iconUrl": "https://i.ibb.co/dswTGd5P/Jun-26-2026-02-50-32-PM.png",
-    "downloadUrl": "https://tutedude.modgalaxy.in/#/",
+    "downloadUrl": "https://tutedude.gemtara.in/#",
     "description": "Download TuteDude MOD APK by AS Multiverse. Premium unlocked, all paid courses free, no ads, certificates included. Latest version 2026 with unlimited access.\n\n",
     "showDownload": false,
     "showStudyNow": true,
-    "studyNowUrl": "https://tutedude.modgalaxy.in/#/",
+    "studyNowUrl": "https://tutedude.gemtara.in/#",
     "seoTitle": "TuteDude MOD APK (Premium Unlocked) by AS Multiverse | Free Courses",
     "seoKeywords": "TuteDude mod apk by AS Multiverse, TuteDude premium unlocked AS Multiverse, TuteDude mod free download AS Multiverse, TuteDude premium courses free, TuteDude premium mod apk latest version, TuteDude all courses unlocked, TuteDude mod apk 2026, free certification courses mod, TuteDude premium features unlocked, online learning mod apk, TuteDude pro mod by AS Multiverse, TuteDude unlocked all courses, mod apk for students, free skill courses mod, TuteDude cracked version, TuteDude VIP unlocked, TuteDude mod no ads, AS Multiverse TuteDude, TuteDude hack mod, TuteDude unlimited access, AS Multiverse mod apk, TuteDude premium mod AS Multiverse, TuteDude mod galaxy",
     "seoDesc": "Unlock free courses on coding, marketing, design & more at TuteDude. Start learning today with zero fees. Gain real skills with India's free learning platform."
