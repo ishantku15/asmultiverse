@@ -115,11 +115,11 @@ window.appsData = [
       "Educational"
     ],
     "iconUrl": "https://i.postimg.cc/26F5zTH7/4661462-1-Mission-JEET-Logo.png",
-    "downloadUrl": "https://vplink.in/missionjeet",
+    "downloadUrl": "https://mj.asmultiverse.online/",
     "description": "Mission JEET is a focused exam preparation app for students aspiring to clear competitive exams like JEE, NEET, SSC, and government job tests. Access structured courses, mock tests, DPPs and expert guidance — all for free with the modded version.",
     "showDownload": true,
     "showStudyNow": true,
-    "studyNowUrl": "https://missionjeet.modgalaxy.in/",
+    "studyNowUrl": "https://mj.asmultiverse.online/",
     "seoTitle": "Mission JEET App v1.02.7 — Free Competitive Exam Preparation App 2026",
     "seoKeywords": "Mission JEET app, Mission JEET mod apk, Mission JEET free download, Mission JEET premium unlocked, Mission JEET JEE NEET SSC, mission jeet study app, mission jeet latest version 2026",
     "seoDesc": "Download Mission JEET v1.02.7 — a powerful competitive exam preparation app for JEE, NEET & SSC aspirants. Access mock tests, DPPs & expert lectures for free on As Multiverse."
