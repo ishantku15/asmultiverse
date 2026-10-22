@@ -254,31 +254,6 @@ window.appsData = [
     "seoDesc": "Download Apna College Mod APK v1.21.6 — get all paid courses including Delta 3.0, DSA, Java & Web Development for free. No subscription required. All premium features unlocked. Available on As Multiverse."
   },
   {
-    "id": "Career---Will",
-    "name": "Career Will",
-    "developer": "Career Will",
-    "version": "14.21.06",
-    "size": "19 MB",
-    "downloads": "90K+",
-    "tags": [
-      "Educational"
-    ],
-    "iconUrl": "https://i.postimg.cc/D0ghh7s2/IMG-20250927-222606.jpg",
-    "downloadUrl": "https://vplink.in/care12343",
-    "description": "Career Will is a comprehensive career guidance and competitive exam preparation app trusted by 90,000+ students. Get expert guidance for SSC, Banking, Railways, UPSC and all government exams. Access live classes, video lectures, test series and notes — all premium features unlocked.",
-    "features": [
-      "Career guidance & exam strategy",
-      "SSC, Banking, Railway & UPSC content",
-      "Live classes & recorded lectures",
-      "Test series with answer keys",
-      "Expert faculty notes & DPPs",
-      "Premium features fully unlocked"
-    ],
-    "seoTitle": "Career Will App v14.21.06 (Premium Unlocked) — Free Career Guidance & Exam Prep 2026",
-    "seoKeywords": "Career Will mod apk, Career Will app free, Career Will premium unlocked, Career Will SSC banking, Career Will UPSC, Career Will download 2026, career will app latest version, career guidance app free india",
-    "seoDesc": "Download Career Will App v14.21.06 with all premium features unlocked. Get expert career guidance & exam prep for SSC, Banking, Railway & UPSC — trusted by 90K+ students. Free on As Multiverse."
-  },
-  {
     "id": "Khan Global Studies",
     "name": "Khan Global Studies",
     "developer": "Khan Sir",
