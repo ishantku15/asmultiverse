@@ -2961,3 +2961,201 @@ body {
         display: block;
     }
 }
+
+/* ==========================================
+   Community Popup Modal (WhatsApp & Telegram)
+   ========================================== */
+.community-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(4, 5, 13, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    padding: 16px;
+}
+
+.community-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.community-modal-card {
+    background: #11141d;
+    background: linear-gradient(180deg, #161a26 0%, #0d1017 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    width: 100%;
+    max-width: 390px;
+    padding: 34px 24px 26px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 30px rgba(0, 212, 255, 0.08);
+    position: relative;
+    text-align: center;
+    transform: scale(0.92) translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.community-modal-overlay.active .community-modal-card {
+    transform: scale(1) translateY(0);
+}
+
+.community-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #9aa4b2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.community-modal-close:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    transform: rotate(90deg);
+}
+
+.community-modal-bell {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: rgba(0, 212, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00d4ff;
+    font-size: 32px;
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.25);
+    animation: gentleBell 2.5s infinite ease-in-out;
+}
+
+@keyframes gentleBell {
+    0%, 100% { transform: rotate(0deg); }
+    15% { transform: rotate(14deg); }
+    30% { transform: rotate(-14deg); }
+    45% { transform: rotate(8deg); }
+    60% { transform: rotate(-8deg); }
+    75% { transform: rotate(0deg); }
+}
+
+.community-modal-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+}
+
+.community-modal-desc {
+    font-size: 0.92rem;
+    color: #9aa4b2;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    padding: 0 6px;
+}
+
+.community-modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.community-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.community-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.community-btn-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+}
+
+.community-btn-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.community-btn-text h4 {
+    margin: 0;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.25;
+}
+
+.community-btn-text p {
+    margin: 2px 0 0 0;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.community-btn-arrow {
+    color: #ffffff;
+    font-size: 14px;
+    opacity: 0.85;
+    transition: transform 0.2s ease;
+}
+
+.community-btn:hover .community-btn-arrow {
+    transform: translateX(3px);
+    opacity: 1;
+}
+
+.community-btn-whatsapp {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.community-btn-telegram {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
+}
+
+.community-modal-footer {
+    font-size: 0.72rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #5d6778;
+    font-weight: 600;
+}
+

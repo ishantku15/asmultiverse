@@ -410,6 +410,50 @@
         <i class="fab fa-instagram"></i>
     </a>
 
+    <!-- Community Modal Popup -->
+    <div id="communityModal" class="community-modal-overlay" aria-modal="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="community-modal-card">
+            <button class="community-modal-close" id="closeCommunityModal" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="community-modal-bell">
+                <i class="fas fa-bell"></i>
+            </div>
+            <h2 id="modalTitle" class="community-modal-title">Stay Connected!</h2>
+            <p class="community-modal-desc">Join our official community for instant updates, study materials, and exclusive announcements.</p>
+            <div class="community-modal-buttons">
+                <a href="https://whatsapp.com/channel/0029Vb8Oj9j1noz43KsErK01" target="_blank" rel="noopener noreferrer" class="community-btn community-btn-whatsapp">
+                    <div class="community-btn-content">
+                        <div class="community-btn-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="community-btn-text">
+                            <h4>Join WhatsApp Channel</h4>
+                            <p>Get instant updates & alerts</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right community-btn-arrow"></i>
+                </a>
+                <a href="https://t.me/asmultiversein" target="_blank" rel="noopener noreferrer" class="community-btn community-btn-telegram">
+                    <div class="community-btn-content">
+                        <div class="community-btn-icon">
+                            <i class="fab fa-telegram-plane"></i>
+                        </div>
+                        <div class="community-btn-text">
+                            <h4>Join Telegram</h4>
+                            <p>Study materials & updates</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right community-btn-arrow"></i>
+                </a>
+            </div>
+            <div class="community-modal-footer">
+                AS MULTIVERSE — OFFICIAL COMMUNITY
+            </div>
+        </div>
+    </div>
+
+
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
@@ -522,6 +566,37 @@
             }
 
             // Add click tracking for analytics
+            
+            // Community Popup Modal Logic
+            const communityModal = document.getElementById("communityModal");
+            const closeCommunityModal = document.getElementById("closeCommunityModal");
+
+            if (communityModal && closeCommunityModal) {
+                // Show modal on home page open (with smooth entrance)
+                setTimeout(() => {
+                    communityModal.classList.add("active");
+                }, 4000);
+
+                // Close button handler
+                closeCommunityModal.addEventListener("click", () => {
+                    communityModal.classList.remove("active");
+                });
+
+                // Close when clicking outside card
+                communityModal.addEventListener("click", (e) => {
+                    if (e.target === communityModal) {
+                        communityModal.classList.remove("active");
+                    }
+                });
+
+                // Close on Escape key
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape" && communityModal.classList.contains("active")) {
+                        communityModal.classList.remove("active");
+                    }
+                });
+            }
+
             document.querySelectorAll('a[href^="#"], .filter-btn, .app-card').forEach(element => {
                 element.addEventListener('click', function () {
                     if (typeof gtag !== 'undefined') {
